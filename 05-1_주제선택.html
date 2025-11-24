@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+  </head>
+  <body>
+    <div class="body_wr renewal_body_wr notScroll">
+      <header>
+        <div class="inner">
+          <div class="prev"><img src="./resource/images/hd_prev_gray.svg" alt="" /></div>
+
+          <h2>2026년 신년운세 풀이</h2>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="product_wr">
+        <div class="product_intro">
+          <div class="select_subject_wr">
+            <div class="cont on" id="cont_1">
+              <div class="progress">
+                <p>1 / 2</p>
+                <div class="bar"><span style="width: 50%"></span></div>
+              </div>
+              <div class="select_wr">
+                <div class="img"><img src="./resource/images/emoji_face_cool.svg" alt="" /></div>
+                <h3>26년, 커리어에 기대되는 점은?</h3>
+                <div class="btn_radio_wr">
+                  <div class="btn_radio">
+                    <input type="radio" name="rad_00" id="rad00-1" />
+                    <label for="rad00-1">취업 성공</label>
+                  </div>
+                  <div class="btn_radio">
+                    <input type="radio" name="rad_00" id="rad00-2" />
+                    <label for="rad00-2">승진 · 이직 기회</label>
+                  </div>
+                  <div class="btn_radio">
+                    <input type="radio" name="rad_00" id="rad00-3" />
+                    <label for="rad00-3">창업 성공</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cont" id="cont_2">
+              <div class="progress">
+                <p>2 / 2</p>
+                <div class="bar"><span style="width: 100%"></span></div>
+              </div>
+              <div class="select_wr">
+                <div class="img"><img src="./resource/images/emoji_face_love.svg" alt="" /></div>
+                <h3>26년, 연애에서 궁금한 점은?</h3>
+                <div class="btn_radio_wr">
+                  <div class="btn_radio">
+                    <input type="radio" name="rad_01" id="rad01-1" />
+                    <label for="rad01-1">새로운 인연</label>
+                  </div>
+                  <div class="btn_radio">
+                    <input type="radio" name="rad_01" id="rad01-2" />
+                    <label for="rad01-2">애인과의 좋은 관계 유지</label>
+                  </div>
+                  <div class="btn_radio">
+                    <input type="radio" name="rad_01" id="rad01-3" />
+                    <label for="rad01-3">전 연인과의 재회</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn_wr fixed">
+            <button class="btn blue" id="next" disabled>다음</button>
+            <button class="btn blue" id="start" disabled style="display: none">풀이 시작</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="common_modal_wr" id="modal">
+      <div class="modal">
+        <div class="inner">
+          <h3>아직 선택이 완료되지 않았어요.</h3>
+          <p>나가면 지금까지 선택한 내용이 저장되지 않아요.</p>
+        </div>
+        <div class="modal_btn">
+          <button class="btn" onclick="toggleModal('#modal')">나가기</button>
+          <button class="btn blue" onclick="toggleModal('#modal')">돌아가기</button>
+        </div>
+      </div>
+    </div>
+    <!-- loading  + on 에 활성화-->
+    <div class="loading_dot">
+      <div class="loading_inner">
+        <div class="loader_dot"></div>
+        <div class="loading_txt">
+          홍길동님의<br />
+          운세를 분석중이에요!
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // cont_01 내 라디오박스 선택 시 버틀 활성화
+        $('input[type="radio"][name="rad_00"]').change(function () {
+          if ($('input[type="radio"][name="rad_00"]').is(":checked")) {
+            $("#next").prop("disabled", false);
+          } else {
+            $("#next").prop("disabled", true);
+          }
+        });
+        // cont_02 내 라디오박스 선택 시 버틀 활성화
+        $('input[type="radio"][name="rad_01"]').change(function () {
+          if ($('input[type="radio"][name="rad_01"]').is(":checked")) {
+            $("#start").prop("disabled", false);
+          } else {
+            $("#start").prop("disabled", true);
+          }
+        });
+        // 다음버튼 클릭 시 이벤트
+        $("#next").on("click", function () {
+          $("#cont_1").removeClass("on");
+          $("#cont_2").addClass("on");
+          $(this).hide();
+          $("#start").show();
+          $("html, body").animate(
+            {
+              scrollTop: 0,
+            },
+            300
+          );
+        });
+        $("#start").on("click", function () {
+          $(".loading_dot").addClass("on");
+          $(".body_wr").addClass("notScroll");
+        });
+      });
+      // 모달 닫기 임시 소스
+      function toggleModal(el) {
+        $(el).fadeOut();
+        $(".body_wr").removeClass("notScroll");
+      }
+    </script>
+  </body>
+</html>

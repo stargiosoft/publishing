@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+  </head>
+  <body>
+    <!--  로딩 화면을 위해 시작시에는 notScroll 추가 -->
+    <div class="body_wr renewal_body_wr notScroll">
+      <header>
+        <div class="inner">
+          <div class="prev"><img src="./resource/images/hd_prev_gray.svg" alt="" /></div>
+
+          <h2>2026년 신년운세 풀이</h2>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="product_wr">
+        <!-- s: page_1 -->
+        <div class="page page_1 on">
+          <div class="manse_wr">
+            <div class="manse_bx">
+              <div class="title">
+                <h2>홍길동님 사주</h2>
+                <p class="date">양력 1992.09.09 午(오)시</p>
+              </div>
+              <div class="manse">
+                <div class="item">
+                  <h4 class="gray">시주</h4>
+                  <div class="bx green">
+                    <b>乙</b>
+                    <span>편관</span>
+                  </div>
+                  <div class="bx black">
+                    <b>亥</b>
+                    <span>정재</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h4 class="gray">일주</h4>
+                  <div class="bx yellow">
+                    <b>己</b>
+                    <span>비견</span>
+                  </div>
+                  <div class="bx red">
+                    <b>巳</b>
+                    <span>정인</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h4 class="gray">월주</h4>
+                  <div class="bx black">
+                    <b>庚</b>
+                    <span>상관</span>
+                  </div>
+                  <div class="bx gray">
+                    <b>申</b>
+                    <span>상관</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h4 class="gray">연주</h4>
+                  <div class="bx black">
+                    <b>辛</b>
+                    <span>식신</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>未</b>
+                    <span>비견</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="manse_bx">
+              <div class="title">
+                <h3>대운</h3>
+              </div>
+              <div class="manse sm">
+                <div class="item">
+                  <h4 class="gray">74</h4>
+                  <div class="bx yellow">
+                    <b>己</b>
+                    <span>겁재</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>己</b>
+                    <span>겁재</span>
+                  </div>
+                  <h4>목욕</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">64</h4>
+                  <div class="bx red">
+                    <b>丁</b>
+                    <span>편인</span>
+                  </div>
+                  <div class="bx red">
+                    <b>丁</b>
+                    <span>편인</span>
+                  </div>
+                  <h4>관대</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">54</h4>
+                  <div class="bx black">
+                    <b>丙</b>
+                    <span>정인</span>
+                  </div>
+                  <div class="bx gray">
+                    <b>丙</b>
+                    <span>정인</span>
+                  </div>
+                  <h4>건록</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">44</h4>
+                  <div class="bx black">
+                    <b>乙</b>
+                    <span>편관</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>乙</b>
+                    <span>편관</span>
+                  </div>
+                  <h4>제왕</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">34</h4>
+                  <div class="bx black">
+                    <b>甲</b>
+                    <span>정관</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>甲</b>
+                    <span>정관</span>
+                  </div>
+                  <h4>쇠</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">24</h4>
+                  <div class="bx black">
+                    <b>癸</b>
+                    <span>편재</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>癸</b>
+                    <span>편재</span>
+                  </div>
+                  <h4>병</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">14</h4>
+                  <div class="bx black">
+                    <b>壬</b>
+                    <span>정재</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>壬</b>
+                    <span>정재</span>
+                  </div>
+                  <h4>사</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">4</h4>
+                  <div class="bx black">
+                    <b>辛</b>
+                    <span>식신</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>辛</b>
+                    <span>식신</span>
+                  </div>
+                  <h4>묘</h4>
+                </div>
+              </div>
+            </div>
+            <div class="manse_bx">
+              <div class="title">
+                <h3>오행</h3>
+              </div>
+              <div class="five_elements">
+                <div class="bar_chart_wr">
+                  <div class="bar_item">
+                    <h4>목(木)</h4>
+                    <div class="bar green">
+                      <span></span>
+                    </div>
+                    <span class="percent">14% </span>
+                    <span class="state red">낮음</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>화(火)</h4>
+                    <div class="bar red">
+                      <span></span>
+                    </div>
+                    <span class="percent">14% </span>
+                    <span class="state red">낮음</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>토(土)</h4>
+                    <div class="bar yellow">
+                      <span></span>
+                    </div>
+                    <span class="percent">14% </span>
+                    <span class="state red">낮음</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>금(金)</h4>
+                    <div class="bar gray">
+                      <span></span>
+                    </div>
+                    <span class="percent">54% </span>
+                    <span class="state yellow">보통</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>수(水)</h4>
+                    <div class="bar black">
+                      <span></span>
+                    </div>
+                    <span class="percent">60% </span>
+                    <span class="state green">높음</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom_btn_wr">
+              <button class="btn blue" onclick="goPage('.page_2')">다음 풀이</button>
+            </div>
+          </div>
+        </div>
+        <!-- e: page_1 -->
+
+        <!-- s: page_2 -->
+        <div class="page page_2">
+          <div class="lucky_txt_wr">
+            <div class="lucky_txt_bx">
+              <div class="txt_bx">
+                <h4>2026년 핵심 요약</h4>
+                <div class="txt">
+                  이 한 해는 내면에 가득한 아이디어를 실현하고 능력을 발휘하며 새로운 도전을 통해 표현의 기쁨을 얻고
+                  주변의 긍정적인 지지를 받는 시기입니다.<br />
+                  이 한 해는 내면에 가득한 아이디어를 실현하고 능력을 발휘하며 새로운 도전을 통해 표현의 기쁨을 얻고
+                  주변의 긍정적인 지지를 받는 시기입니다.<br />
+                  이 한 해는 내면에 가득한 아이디어를 실현하고 능력을 발휘하며 새로운 도전을 통해 표현의 기쁨을 얻고
+                  주변의 긍정적인 지지를 받는 시기입니다.
+                </div>
+              </div>
+            </div>
+            <div class="lucky_txt_bx">
+              <div class="txt_bx">
+                <h4>내 사주에 나타난 나의 모습은?</h4>
+                <div class="txt">
+                  이 한 해는 내면에 가득한 아이디어를 실현하고 능력을 발휘하며 새로운 도전을 통해 표현의 기쁨을 얻고
+                  주변의 긍정적인 지지를 받는 시기입니다. 이 한 해는 내면에 가득한 아이디어를 실현하고 능력을 발휘하며
+                  새로운 도전을 통해 표현의 기쁨을 얻고 주변의 긍정적인 지지를 받는 시기입니다.
+                </div>
+              </div>
+            </div>
+            <div class="lucky_txt_bx">
+              <div class="txt_bx">
+                <h4>주의할 점</h4>
+                <div class="txt">
+                  이 한 해는 내면에 가득한 아이디어를 실현하고 능력을 발휘하며 새로운 도전을 통해 표현의 기쁨을 얻고
+                  주변의 긍정적인 지지를 받는 시기입니다. 이 한 해는 내면에 가득한 아이디어를 실현하고 능력을 발휘하며
+                  새로운 도전을 통해 표현의 기쁨을 얻고 주변의 긍정적인 지지를 받는 시기입니다.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn_wr">
+            <button class="btn light_blue" onclick="goPage('.page_1')">이전 풀이</button>
+            <button class="btn blue" onclick="goPage('.page_3')">다음 풀이</button>
+          </div>
+        </div>
+        <!-- e:page_2 -->
+
+        <!-- s: page_3 20251027 page_3 추가-->
+        <div class="page page_3">
+          <div class="amulet_txt_wr">
+            <div class="amulet_txt_bx">
+              <h3>홍염살 부적</h3>
+              <div class="amulet_bx">
+                <div class="amulet"><img src="./resource/images/amulet_1.svg" alt="" /></div>
+              </div>
+              <div class="txt_bx">
+                <h4>이런 살이에요</h4>
+                <div class="txt">
+                  홍염살은 사랑과 매력의 불꽃 같은 기운이에요.빛날 땐 사람을 끌어당기는 매력이 넘치지만, 너무 강하면
+                  마음이 흔들리고 인연이 꼬이기도 하죠.
+                </div>
+                <h4>이 부적은 이런 마음을 담았어요</h4>
+                <ul class="list">
+                  <li>진짜 좋은 인연만 들어오게 도와줘요.</li>
+                  <li>감정이 너무 요동치지 않게 안정시켜줘요.</li>
+                  <li>
+                    유혹이나 복잡한 관계는 멀리하게 해줘요.유혹이나 복잡한 관계는 멀리하게 해줘요.유혹이나 복잡한 관계는
+                    멀리하게 해줘요.
+                  </li>
+                </ul>
+              </div>
+              <div class="btn_bx">
+                <button class="btn_amulet">부적 받기</button>
+              </div>
+            </div>
+          </div>
+          <div class="amulet_txt_wr">
+            <div class="amulet_txt_bx">
+              <h3>백호살 부적</h3>
+              <div class="amulet_bx">
+                <div class="amulet"><img src="./resource/images/amulet_1.svg" alt="" /></div>
+              </div>
+              <div class="txt_bx">
+                <h4>이런 살이에요</h4>
+                <div class="txt">
+                  백호살은 강인한 호랑이의 힘이에요.이 기운이 제자리를 찾으면 용기와 리더십이 되지만, 그렇지 않으면
+                  다툼이나 상처로 나타나죠.
+                </div>
+                <h4>이 부적은 이런 마음을 담았어요</h4>
+                <ul class="list">
+                  <li>내 안의 ‘호랑이’를 길들여, 나를 지키는 수호신으로 바꿔줘요.</li>
+                  <li>분노와 불안을 잠재워 평온을 지켜줘요.</li>
+                  <li>위험한 일은 멀리하고, 복된 길로 나아가게 해줘요.</li>
+                </ul>
+              </div>
+              <div class="btn_bx">
+                <button class="btn_amulet">부적 받기</button>
+              </div>
+            </div>
+          </div>
+          <div class="amulet_txt_wr">
+            <div class="amulet_txt_bx">
+              <h3>천살 부적</h3>
+              <div class="amulet_bx">
+                <div class="amulet"><img src="./resource/images/amulet_1.svg" alt="" /></div>
+              </div>
+              <div class="txt_bx">
+                <h4>이런 살이에요</h4>
+                <div class="txt">
+                  천살은 하늘처럼 변화무쌍한 운의 바람이에요.예상치 못한 이별이나 이동, 돌발 상황을 가져오지만, 그 안엔
+                  새로운 시작의 씨앗도 숨어 있어요.
+                </div>
+                <h4>이 부적은 이런 마음을 담았어요</h4>
+                <ul class="list">
+                  <li>갑작스러운 변화 속에서도 나를 잃지 않게 해줘요.</li>
+                  <li>나쁜 기운은 흩어지고, 좋은 바람만 남게 해줘요.</li>
+                  <li>변화가 두렵지 않게, 복이 따라오게 해줘요.</li>
+                </ul>
+              </div>
+              <div class="btn_bx">
+                <button class="btn_amulet">부적 받기</button>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn_wr">
+            <div class="bottom_btn_wr">
+              <button class="btn light_blue" onclick="goPage('.page_2')">이전 풀이</button>
+              <button class="btn blue" onclick="goPage('.page_4')">다음 풀이</button>
+            </div>
+          </div>
+        </div>
+        <!-- e: page_3 -->
+        <!-- s: page_4 : 20251028 - page_3=> page_4 로변경 -->
+        <div class="page page_4">
+          <div class="share_info_wr">
+            <div class="share_info_bx">
+              <h3>
+                공유하면 <b>10%</b><br />
+                리워드를 받을 수 있어요
+              </h3>
+              <button>자세히 보기</button>
+              <div class="share_btn_wr">
+                <div class="share_btn"><img src="./resource/images/icon_share_kakao.svg" alt="" /></div>
+                <div class="share_btn"><img src="./resource/images/icon_share_x.svg" alt="" /></div>
+                <div class="share_btn"><img src="./resource/images/icon_share_copy.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
+          <div class="sub_card_wr">
+            <h2 class="title">홍길동님을 위한 상품 추천</h2>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">2025년 하반기 운세</h3>
+                <p class="desc">변화가 찾아오는 해, 을사년</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_2.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">2025년 하반기 운세2025년 하반기 운세</h3>
+                <p class="desc">변화가 찾아오는 해, 을사년 변화가 찾아오는 해, 을사년</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_3.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">퇴사 자금 마련 완료</h3>
+                <p class="desc">돈 걱정 끝내는 나만의 재물 폭발 시점</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_4.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">2025년 하반기 운세</h3>
+                <p class="desc">변화가 찾아오는 해, 을사년</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">타로로 보는 나의 재물운</h3>
+                <p class="desc">언제쯤 돈 걱정 없이 살 수 있을까?</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn_wr">
+            <button class="btn light_blue" onclick="goPage('.page_1')">풀이 다시보기</button>
+            <button class="btn blue">홈으로 가기</button>
+          </div>
+        </div>
+        <!-- e: page_4 -->
+      </main>
+
+      <!-- loading  + on 에 활성화-->
+      <div class="loading_dot on">
+        <div class="loading_inner">
+          <div class="loader_dot"></div>
+          <div class="loading_txt">
+            홍길동님의<br />
+            운세를 분석중이에요!
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // bar chart
+      const barData = [14, 14, 14, 54, 60];
+      $(document).ready(function () {
+        setTimeout(function () {
+          $(".loading_dot").removeClass("on");
+          $(".body_wr").removeClass("notScroll");
+        }, 3000);
+
+        // 4초 후에 실행 (로딩 시간 고려)
+        setTimeout(function () {
+          $(".bar_item > .bar > span").each(function (index) {
+            const value = barData[index];
+            $(this).css("width", value + "%");
+          });
+        }, 4000);
+      });
+
+      // 페이지 이동
+      function goPage(el) {
+        $(".page").removeClass("on");
+        $(el).addClass("on");
+        $("html, body").animate(
+          {
+            scrollTop: 0,
+          },
+          300
+        );
+      }
+    </script>
+  </body>
+</html>

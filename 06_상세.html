@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+    <!-- ↓ /swiper -->
+    <script src="./resource/library/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./resource/library/swiper-bundle.min.css" />
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+  </head>
+  <body>
+    <div class="body_wr renewal_body_wr">
+      <header>
+        <div class="inner">
+          <h1 class="home_gray"><img src="./resource/images/icon_home_gray.svg" alt="" /></h1>
+          <button class="btn_share">공유하고 수익 얻기</button>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="product_wr">
+        <div class="visual_detail_container">
+          <div class="visual_wr">
+            <video autoplay muted loop poster="./resource/images/detail_visual_thumnail.png">
+              <source src="./resource/video/detail_visual_video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="user_review_info">
+            <div class="star_point">
+              <ul class="stars">
+                <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+                <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+                <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+                <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+                <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+              </ul>
+              <div>4.7</div>
+            </div>
+            <p>지난 한 달간 <b>320명이 구매</b>했어요</p>
+            <button class="btn blue_border">
+              <span>(127개) 리뷰 전체 보기</span><img src="./resource/images/btn_arr_blue.svg" alt="" />
+            </button>
+          </div>
+          <div class="visual_detail_cont">
+            <img src="./resource/images/visual_detail_1.jpg" alt="" />
+          </div>
+          <div class="visual_detail_cont">
+            <img src="./resource/images/visual_detail_2.png" alt="" />
+          </div>
+          <div class="visual_detail_cont">
+            <img src="./resource/images/visual_detail_3.png" alt="" />
+          </div>
+          <div class="visual_detail_cont">
+            <img src="./resource/images/visual_detail_4.jpg" alt="" />
+          </div>
+          <div class="visual_detail_cont">
+            <img src="./resource/images/visual_detail_5.jpg" alt="" />
+          </div>
+          <div class="best_review_wr">
+            <div class="best_review_title_wr">
+              <div class="best_review_title">
+                <h2>3,872명이<br />먼저 경험했습니다</h2>
+                <p>실제 구매자들의 생생한 후기</p>
+              </div>
+              <div class="best_point">
+                <h3>운세 만족도</h3>
+                <div class="point">4.7점</div>
+                <ul class="total_point">
+                  <li>
+                    <p>3,872</p>
+                    <span>구매자</span>
+                  </li>
+                  <li>
+                    <p>94%</p>
+                    <span>만족도</span>
+                  </li>
+                  <li>
+                    <p>4.7</p>
+                    <span>평점</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="best_review_slide_wr">
+              <h3>BEST 후기</h3>
+              <div class="swiper reviewSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="review_item_bx">
+                      <div class="item_hd">
+                        <div class="name_tag">해</div>
+                        <div class="item_info_wr">
+                          <p>해피*</p>
+                          <div class="item_info">
+                            <div class="tag">재물운 적중</div>
+                            <div class="point"><img src="./resource/images/icon_star_yellow.svg" alt="" />5.0</div>
+                            <div class="date">2015.01.10</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item_bd">
+                        "재물운 보고 투자 타이밍 잡았는데 정말 대박났어요! 19,800원 아깝지 않아요."
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review_item_bx">
+                      <div class="item_hd">
+                        <div class="name_tag">해</div>
+                        <div class="item_info_wr">
+                          <p>해피*</p>
+                          <div class="item_info">
+                            <div class="tag">재물운 적중</div>
+                            <div class="point"><img src="./resource/images/icon_star_yellow.svg" alt="" />5.0</div>
+                            <div class="date">2015.01.10</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item_bd">
+                        "이직 고민하다가 운세 보고 결심했어요. 지금 새 회사에서 정말 만족하면서 일하고 있습니다. 이런
+                        결정적인 순간에 도움 받았어요. 월별 조언이 구체적이라 계획 세우기도 좋았고
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review_item_bx">
+                      <div class="item_hd">
+                        <div class="name_tag">해</div>
+                        <div class="item_info_wr">
+                          <p>해피*</p>
+                          <div class="item_info">
+                            <div class="tag">재물운 적중</div>
+                            <div class="point"><img src="./resource/images/icon_star_yellow.svg" alt="" />5.0</div>
+                            <div class="date">2015.01.10</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item_bd">
+                        "재물운 보고 투자 타이밍 잡았는데 정말 대박났어요! 19,800원 아깝지 않아요.""이직 고민하다가 운세
+                        보고 결심했어요. 지금 새 회사에서 정말 만족하면서 일하고 있습니다. 이런 결정적인 순간에 도움
+                        받았어요. 월별 조언이 구체적이라 계획 세우기도 좋았고
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review_item_bx">
+                      <div class="item_hd">
+                        <div class="name_tag">해</div>
+                        <div class="item_info_wr">
+                          <p>해피*</p>
+                          <div class="item_info">
+                            <div class="tag">재물운 적중</div>
+                            <div class="point"><img src="./resource/images/icon_star_yellow.svg" alt="" />5.0</div>
+                            <div class="date">2015.01.10</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item_bd">
+                        "이직 고민하다가 운세 보고 결심했어요. 지금 새 회사에서 정말 만족하면서 일하고 있습니다. 이런
+                        결정적인 순간에 도움 받았어요. 월별 조언이 구체적이라 계획 세우기도 좋았고
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="total_report_wr">
+              <h3>
+                2026년 리포트,<br />
+                <b>무엇을</b> 알게 되나요?
+              </h3>
+              <div class="report_bx_wr">
+                <div class="report_bx">
+                  <div class="tag">총론</div>
+                  <h4><img src="./resource/images/report_star.svg" alt="" />2026년 나의 핵심 키워드</h4>
+                  <div class="txt">
+                    이제 헷갈리지 않아요. 1년 동안 나에게 어떤 좋은 일이 생길지, 미리 알 수 있으니까요.
+                  </div>
+                </div>
+                <div class="report_bx">
+                  <div class="tag">재물운</div>
+                  <h4><img src="./resource/images/report_money.svg" alt="" />돈이 들어오는 시기, 나가는 시기</h4>
+                  <div class="txt">돈이 언제 들어올까요? 돈 모으는 가장 좋은 때를 콕 집어 알려줄게요.</div>
+                </div>
+                <div class="report_bx">
+                  <div class="tag">애정운</div>
+                  <h4><img src="./resource/images/report_heart.svg" alt="" />새로운 인연? 혹은 관계의 발전?</h4>
+                  <div class="txt">
+                    언제 좋은 인연을 만날까요? 우리 사이 영원할까요? 두근두근 설레는 날을 미리 알려드려요.
+                  </div>
+                </div>
+                <div class="report_bx">
+                  <div class="tag">직장/사업운</div>
+                  <h4><img src="./resource/images/report_star.svg" alt="" />이직? 승진? 혹은 확장?</h4>
+                  <div class="txt">지금 하는 일을 계속할까요? 새로운 도전을 해볼까요? 그 정답을 찾아줄게요.</div>
+                </div>
+              </div>
+            </div>
+            <div class="difference_point_wr">
+              <h3>다른 운세랑 <br />뭐가 <b>다를까요?</b></h3>
+              <div class="difference_point_bx">
+                <div class="icon">
+                  <img src="./resource/images/difference_point_1.svg" alt="" />
+                </div>
+                <h4>정통 사주명리학</h4>
+                <div class="txt">
+                  25년 상담 노하우와 10만 건 이상의 실제 사례를 바탕으로, 전문가는 물론 AI와 함께 완성도를 높였습니다.
+                </div>
+              </div>
+              <div class="difference_point_bx">
+                <div class="icon">
+                  <img src="./resource/images/difference_point_2.svg" alt="" />
+                </div>
+                <h4>물상(物象)의 득실(得失) 해석</h4>
+                <div class="txt">
+                  추상적인 오행만 보는 게 아니라, '부동산 기회' '직장 이동'처럼 실제로 무엇을 얻고 조심할지 구체적으로
+                  알려드립니다.
+                </div>
+              </div>
+              <div class="difference_point_bx">
+                <div class="icon">
+                  <img src="./resource/images/difference_point_3.svg" alt="" />
+                </div>
+                <h4>신점(神占) 예측 포함</h4>
+                <div class="txt">
+                  합·형·충으로 사주 글자 간 관계를 분석합니다. 올해 언제 어떤 일이 생길지, 관계가 어떻게 바뀔지 더
+                  구체적으로 알려드려요.
+                </div>
+              </div>
+              <div class="difference_point_bx">
+                <div class="icon">
+                  <img src="./resource/images/difference_point_4.svg" alt="" />
+                </div>
+                <h4>주제별 추가 질문</h4>
+                <div class="txt">궁금한 점이 생기면 언제든 사주 전문 AI에게 추가 질문할 수 있습니다.</div>
+              </div>
+            </div>
+            <div class="chance_wr">
+              <div class="chance_title">
+                <h3>1년의 방향을 결정할<br /><b>단 한 번의 기회 !</b></h3>
+                <p>지금 이 페이지에서만 추가 특별 할인 적용</p>
+              </div>
+              <div class="chance_price_bx">
+                <div class="price">
+                  <h4>정가</h4>
+                  <s>30,000원</s>
+                </div>
+                <div class="price">
+                  <h4>1월 특가<span class="tag">특가 마감 임박</span></h4>
+                  <s> 22,800원</s>
+                </div>
+                <div class="total_price">
+                  <h4>이벤트 추가 할인가</h4>
+                  <b>19,800원</b>
+                </div>
+                <button class="btn btn_primary btn_h52">19,800원에 내 운세 확인하기</button>
+              </div>
+              <ul class="desc">
+                <li>안전 결제</li>
+                <li>100% 환불 보장</li>
+              </ul>
+            </div>
+            <div class="faq_wr">
+              <h3>자주 묻는 질문</h3>
+              <!-- history_qna + on 활성화 / qna_bd 인라인 스타일-->
+              <div class="history_qna on">
+                <div class="qna_hd">
+                  <h2>Q. 생년월일은 언제 입력하나요?</h2>
+                  <button class="btn_acc"><img src="./resource/images/icon_acc_arr_gray.svg" alt="" /></button>
+                </div>
+                <div class="qna_bd" style="display: block">
+                  <div class="txt">
+                    결제 완료 후 바로 입력하시면 됩니다. 지금은 결제만 진행하시면 되니 부담 없이 구매하세요!
+                  </div>
+                </div>
+              </div>
+              <div class="history_qna">
+                <div class="qna_hd">
+                  <h2>Q. 출생 시간을 모르는데 괜찮나요?</h2>
+                  <button class="btn_acc"><img src="./resource/images/icon_acc_arr_gray.svg" alt="" /></button>
+                </div>
+                <div class="qna_bd">
+                  <div class="txt">
+                    결제 완료 후 바로 입력하시면 됩니다. 지금은 결제만 진행하시면 되니 부담 없이 구매하세요!
+                  </div>
+                </div>
+              </div>
+              <div class="history_qna">
+                <div class="qna_hd">
+                  <h2>Q. 언제까지 볼 수 있나요?</h2>
+                  <button class="btn_acc"><img src="./resource/images/icon_acc_arr_gray.svg" alt="" /></button>
+                </div>
+                <div class="qna_bd">
+                  <div class="txt">
+                    결제 완료 후 바로 입력하시면 됩니다. 지금은 결제만 진행하시면 되니 부담 없이 구매하세요!
+                  </div>
+                </div>
+              </div>
+              <div class="history_qna">
+                <div class="qna_hd">
+                  <h2>Q. 추가 비용이 있나요?</h2>
+                  <button class="btn_acc"><img src="./resource/images/icon_acc_arr_gray.svg" alt="" /></button>
+                </div>
+                <div class="qna_bd">
+                  <div class="txt">
+                    결제 완료 후 바로 입력하시면 됩니다. 지금은 결제만 진행하시면 되니 부담 없이 구매하세요!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="refund_info_wr">
+              <h3>걱정 마세요.<br />마음에 들지 않으면<br /><b>100% 환불해드려요!</b></h3>
+              <p>3,872명 중 94%가 만족한 이유,</p>
+              <p><b>지금 바로 확인해보세요.</b></p>
+            </div>
+            <div class="bottom_btn_wr">
+              <div class="price">
+                <s>30,000원</s>
+                <b>19,800원</b>
+              </div>
+              <button class="btn btn_primary">
+                지금 바로 구매<img src="./resource/images/icon_flash.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      var swiper = new Swiper(".reviewSwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      // 질문기록 아코디언
+      $(".history_qna .qna_hd").on("click", function () {
+        $(this).parent(".history_qna").toggleClass("on");
+        $(this).siblings(".qna_bd").slideToggle();
+      });
+    </script>
+  </body>
+</html>

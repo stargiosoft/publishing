@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+    <!-- ↓ /swiper -->
+    <script src="./resource/library/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./resource/library/swiper-bundle.min.css" />
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+  </head>
+  <body>
+    <div class="body_wr renewal_body_wr">
+      <header>
+        <div class="inner">
+          <h1 class="logo">스타지오</h1>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="home_wr gray_home_wr">
+        <div class="main_visual_card_wr">
+          <div class="main_visual_card">
+            <!-- <div class="img"><img src="./resource/images/main_visual_1.png" alt="" /></div> -->
+            <!-- 20251120 동영상 추가 -->
+            <div class="img">
+              <video
+                id="myVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                poster="./resource/images/main_visual_thumnail.png"
+                class="transition duration-300 hover:shadow-lg"
+              >
+                <source
+                  src="./resource/video/main_visual_video.mp4"
+                  type="video/mp4"
+                  onerror="handleVideoError(this)"
+                />
+
+                <!-- 만약 비디오가 재생되지 않을 경우 표시될 대체 텍스트 -->
+                <p>귀하의 브라우저는 HTML5 비디오를 지원하지 않습니다.</p>
+              </video>
+            </div>
+            <div class="info">
+              <h2 class="title">2026년 신년운세</h2>
+              <p class="desc">단 한 번의 해석으로 1년의 방향을 잡아드릴게요</p>
+              <div class="price"><s>30,000원</s><b>19,800원</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="sub_card_wr">
+          <h2 class="title">프리미엄 운세풀이</h2>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">2025년 하반기 운세</h3>
+              <p class="desc">변화가 찾아오는 해, 을사년</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_2.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">2025년 하반기 운세2025년 하반기 운세</h3>
+              <p class="desc">변화가 찾아오는 해, 을사년 변화가 찾아오는 해, 을사년</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_3.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">퇴사 자금 마련 완료</h3>
+              <p class="desc">돈 걱정 끝내는 나만의 재물 폭발 시점</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_4.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">2025년 하반기 운세</h3>
+              <p class="desc">변화가 찾아오는 해, 을사년</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">타로로 보는 나의 재물운</h3>
+              <p class="desc">언제쯤 돈 걱정 없이 살 수 있을까?</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="sub_card_wr">
+          <h2 class="title">밀착 고민 상담</h2>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">2025년 하반기 운세</h3>
+              <p class="desc">변화가 찾아오는 해, 을사년</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_2.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">2025년 하반기 운세2025년 하반기 운세</h3>
+              <p class="desc">변화가 찾아오는 해, 을사년 변화가 찾아오는 해, 을사년</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_3.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">퇴사 자금 마련 완료</h3>
+              <p class="desc">돈 걱정 끝내는 나만의 재물 폭발 시점</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_4.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">2025년 하반기 운세</h3>
+              <p class="desc">변화가 찾아오는 해, 을사년</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <div class="sub_card">
+            <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+            <div class="info">
+              <h3 class="title">타로로 보는 나의 재물운</h3>
+              <p class="desc">언제쯤 돈 걱정 없이 살 수 있을까?</p>
+              <div class="price"><s>15,000원</s><b>9,500원</b></div>
+            </div>
+          </div>
+          <button class="btn_view_all">전체보기</button>
+        </div>
+      </main>
+
+      <footer>
+        <div class="inner">
+          <h2>(주)스타지오소프트</h2>
+          <p class="copy">Copyright 2024@Stargiosoft All Rights Reserved.</p>
+          <ul class="info">
+            <li>대표자 서지현 | 사업자등록번호 827-88-01815</li>
+            <li>통신판매업번호 2024-서울영등포-2084</li>
+            <li>서울시 영등포구 양평로 149, 1507호</li>
+            <li>문의 fship1124@stargio.co.kr (010-3702-0428)</li>
+          </ul>
+          <ul class="links">
+            <li><a href="">이용약관</a></li>
+            <li><a href="">리워드 이용약관</a></li>
+            <li><a href="">개인정보 처리방침</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script></script>
+  </body>
+</html>

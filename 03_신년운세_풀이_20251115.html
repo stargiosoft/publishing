@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
+  </head>
+  <body>
+    <!--  로딩 화면을 위해 시작시에는 notScroll 추가 -->
+    <div class="body_wr renewal_body_wr notScroll">
+      <header>
+        <div class="inner">
+          <div class="prev"><img src="./resource/images/hd_prev_gray.svg" alt="" /></div>
+
+          <h2>2026년 신년운세 풀이</h2>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="product_wr">
+        <!-- s: page_1 -->
+        <div class="page page_1 on">
+          <!-- 20251115 타이틀추가 -->
+          <h1>나의 사주명식</h1>
+          <div class="manse_wr">
+            <div class="manse_bx">
+              <!-- 20251115 수정 -->
+              <div class="title">
+                <h2>홍길동</h2>
+                <p class="date">양력 1992.09.09 午(오)시</p>
+              </div>
+              <div class="manse">
+                <div class="item">
+                  <h4 class="gray">시주</h4>
+                  <div class="bx green">
+                    <b>乙</b>
+                    <span>편관</span>
+                  </div>
+                  <div class="bx black">
+                    <b>亥</b>
+                    <span>정재</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h4 class="gray">일주</h4>
+                  <div class="bx yellow">
+                    <b>己</b>
+                    <span>비견</span>
+                  </div>
+                  <div class="bx red">
+                    <b>巳</b>
+                    <span>정인</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h4 class="gray">월주</h4>
+                  <div class="bx black">
+                    <b>庚</b>
+                    <span>상관</span>
+                  </div>
+                  <div class="bx gray">
+                    <b>申</b>
+                    <span>상관</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h4 class="gray">연주</h4>
+                  <div class="bx black">
+                    <b>辛</b>
+                    <span>식신</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>未</b>
+                    <span>비견</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="manse_bx">
+              <div class="title">
+                <h3>대운</h3>
+              </div>
+              <div class="manse sm">
+                <div class="item">
+                  <h4 class="gray">74</h4>
+                  <div class="bx yellow">
+                    <b>己</b>
+                    <span>겁재</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>己</b>
+                    <span>겁재</span>
+                  </div>
+                  <h4>목욕</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">64</h4>
+                  <div class="bx red">
+                    <b>丁</b>
+                    <span>편인</span>
+                  </div>
+                  <div class="bx red">
+                    <b>丁</b>
+                    <span>편인</span>
+                  </div>
+                  <h4>관대</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">54</h4>
+                  <div class="bx black">
+                    <b>丙</b>
+                    <span>정인</span>
+                  </div>
+                  <div class="bx gray">
+                    <b>丙</b>
+                    <span>정인</span>
+                  </div>
+                  <h4>건록</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">44</h4>
+                  <div class="bx black">
+                    <b>乙</b>
+                    <span>편관</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>乙</b>
+                    <span>편관</span>
+                  </div>
+                  <h4>제왕</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">34</h4>
+                  <div class="bx black">
+                    <b>甲</b>
+                    <span>정관</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>甲</b>
+                    <span>정관</span>
+                  </div>
+                  <h4>쇠</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">24</h4>
+                  <div class="bx black">
+                    <b>癸</b>
+                    <span>편재</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>癸</b>
+                    <span>편재</span>
+                  </div>
+                  <h4>병</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">14</h4>
+                  <div class="bx black">
+                    <b>壬</b>
+                    <span>정재</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>壬</b>
+                    <span>정재</span>
+                  </div>
+                  <h4>사</h4>
+                </div>
+                <div class="item">
+                  <h4 class="gray">4</h4>
+                  <div class="bx black">
+                    <b>辛</b>
+                    <span>식신</span>
+                  </div>
+                  <div class="bx yellow">
+                    <b>辛</b>
+                    <span>식신</span>
+                  </div>
+                  <h4>묘</h4>
+                </div>
+              </div>
+            </div>
+            <div class="manse_bx">
+              <div class="title">
+                <h3>오행</h3>
+              </div>
+              <div class="five_elements">
+                <div class="bar_chart_wr">
+                  <div class="bar_item">
+                    <h4>목(木)</h4>
+                    <div class="bar green">
+                      <span></span>
+                    </div>
+                    <span class="percent">14% </span>
+                    <span class="state red">낮음</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>화(火)</h4>
+                    <div class="bar red">
+                      <span></span>
+                    </div>
+                    <span class="percent">14% </span>
+                    <span class="state red">낮음</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>토(土)</h4>
+                    <div class="bar yellow">
+                      <span></span>
+                    </div>
+                    <span class="percent">14% </span>
+                    <span class="state red">낮음</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>금(金)</h4>
+                    <div class="bar gray">
+                      <span></span>
+                    </div>
+                    <span class="percent">54% </span>
+                    <span class="state yellow">보통</span>
+                  </div>
+                  <div class="bar_item">
+                    <h4>수(水)</h4>
+                    <div class="bar black">
+                      <span></span>
+                    </div>
+                    <span class="percent">60% </span>
+                    <span class="state green">높음</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 하단 버튼 영역 변경 20251115 -->
+            <div class="bottom_nav_wr">
+              <div class="list_num">
+                <div class="btn_list" onclick="showActionSheet('#actionSheet01')">
+                  <img src="./resource/images/btn_list.svg" alt="" />
+                </div>
+                <div><b>5/</b> 10</div>
+              </div>
+              <div class="nav_btn">
+                <button class="prev"><img src="./resource/images/arrow-left.svg" alt="" />이전</button>
+                <button class="next" onclick="goPage('.page_2')">
+                  다음<img src="./resource/images/arrow-left.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- e: page_1 -->
+
+        <!-- s: page_2 -->
+        <div class="page page_2">
+          <div class="img_cont">
+            <img src="./resource/images/sin_cover.png" alt="" />
+          </div>
+          <div class="bottom_nav_wr">
+            <div class="list_num">
+              <div class="btn_list" onclick="showActionSheet('#actionSheet01')">
+                <img src="./resource/images/btn_list.svg" alt="" />
+              </div>
+              <div><b>5/</b> 10</div>
+            </div>
+            <div class="nav_btn">
+              <button class="prev" onclick="goPage('.page_1')">
+                <img src="./resource/images/arrow-left.svg" alt="" />이전
+              </button>
+              <button class="next" onclick="goPage('.page_3')">
+                다음<img src="./resource/images/arrow-left.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- e: page_2 -->
+        <!-- s: page_3 -->
+        <div class="page page_3">
+          <div class="img_cont">
+            <img src="./resource/images/sin_intro.png" alt="" />
+          </div>
+          <div class="bottom_nav_wr">
+            <div class="list_num">
+              <div class="btn_list" onclick="showActionSheet('#actionSheet01')">
+                <img src="./resource/images/btn_list.svg" alt="" />
+              </div>
+              <div><b>5/</b> 10</div>
+            </div>
+            <div class="nav_btn">
+              <button class="prev" onclick="goPage('.page_2')">
+                <img src="./resource/images/arrow-left.svg" alt="" />이전
+              </button>
+              <button class="next" onclick="goPage('.page_4')">
+                다음<img src="./resource/images/arrow-left.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- e: page_3 -->
+        <!-- s: page_4 -->
+        <div class="page page_4">
+          <!-- 20251118 합협충 페이지 수정 -->
+          <h1>올해 너에게 닥칠 일을 알려주지</h1>
+          <div class="manse_txt_wr">
+            <div class="manse_txt_bx">
+              <h2>하늘의 인연줄</h2>
+              <div class="txt">
+                뜻밖의 일이 기회로 연결될 거야. 예컨대 행사에서 옆자리 사람이 건넨 한마디가 곧 협업 제안으로 이어질 수
+                있고 거래처 대표가 갑작스레 전화를 걸어 일을 맡길 수 있다. 경쟁력은 단순한 운이 아니다. 평소 쌓아온 실무
+                능력과 작은 성과들이 구체적으로는 이력서 한 줄, 포트폴리오의 사례, 미팅에서 보여준 문제 해결력으로
+                작용해 상대의 신뢰를 만들고 그 신뢰가 곧 선택으로 이어지게 될 거야. 당장 드는 비용은 세미나 참가비나
+                장비 구입 같은 투자 형태로 나올 수 있다. 하지만 그 지출이 몇 달 안에 계약과 매출로 되돌아오는 경우가
+                많으니 무턱대고 아끼지 말아라.
+                <br />
+                <br />
+                계속 도전하고 시도해야 해. 지원서를 여러 번 내고 포트폴리오를 정비해 작은 프로젝트부터 직접 실행해 봐라.
+                그 실천이 성과를 손에 넣는 확률을 올려줄 거야. 연애 관계는 직설적으로 대화하고 경계를 분명히 해라.
+                부담이 줄어들고 상대와의 관계가 안정될 수 있다. 취미 모임이나 수업에서는 같은 관심사를 가진 사람들
+                사이에서 더 단단한 만남이 생길 가능성이 크다.
+                <br />
+                <br />
+                작은 성취를 스스로 인정하는 습관을 가져라. 그렇게 하면 선택의 기준이 분명해지고 자신감이 쌓여 더 나은
+                결정을 하게 될 거야. '사주'와 '기운'을 보면 작은 성공의 축적이 결국 큰 흐름을 바꾼다.
+              </div>
+            </div>
+            <div class="manse_txt_bx">
+              <h2>땅의 인연줄</h2>
+              <div class="txt">
+                지금은 예상치 못한 일이 뜻밖의 기회로 이어지는 때야. 우연히 들어간 동네 모임에서 나눈 한 마디가 곧 같이
+                일하자는 제안으로 연결될 수 있고. 평소 거래처 담당자가 바뀌면서 당신에게 바로 프로젝트를 떠맡기게 될
+                가능성도 보인다. 이건 단순한 요행이 아니다. 지금 움직이는 건 '운'이지만. 그 '운'이 실질적인 결과로
+                바뀌는 이유는 당신이 쌓아온 포트폴리오와 즉각적인 대응력, 작은 성과의 기록 때문이다. 예를 들어
+                포트폴리오에 구체적 산출물과 수치가 들어있으면 제안이 왔을 때 신뢰를 얻어 바로 계약으로 이어진다. 당장은
+                돈이 나가겠지만 세미나 참가비나 장비 구입 같은 투자가 당신의 실무 역량을 뒷받침해 다음 수입으로 돌아올
+                거야.
+                <br /><br />계속 도전하고 시도해야 한다. 지원서를 한 번으로 그만두지 말고 여러 번 넣어라. 프리랜스
+                플랫폼에 샘플을 올리고 작은 단건 프로젝트부터 따내 실행해 보면 실전 기록이 쌓여 제안으로 연결될 확률이
+                높아진다. 포트폴리오를 정리해 구체적 결과물을 보여주면 상대가 당신을 신뢰하고 일을 맡기게 될 거야.
+                시도하는 사람이 결국 기회를 잡는다. <br /><br />사랑 일은 명확한 대화와 경계 설정으로 부담을 덜 수 있다.
+                만나고 싶은 횟수나 연락 빈도 같은 사소한 약속을 분명히 말하면 상대도 편해지고 관계가 안정된다. 새로
+                시작한 취미 모임이나 수업에서는 얼굴을 자주 비추고 작은 역할을 맡아라. 그렇게 하면 만남이 편안하고
+                꾸준해질 가능성이 크다. 또 작은 성취를 스스로 인정하는 습관을 들여라. 하루에 한 번 해낸 일을 적어보면
+                선택의 기준이 분명해지고 그 자신감이 더 좋은 결정을 이끌 거야.
+              </div>
+            </div>
+          </div>
+          <div class="question_wr">
+            <div class="question_bx">
+              <div class="question_icon">
+                <img src="./resource/images/icon_chat.svg" alt="" />
+              </div>
+              <h2>최대 3번까지 질문할 수 있어요</h2>
+              <p>풀이에 대한 궁금증이나, 더 알고 싶은 내용을 자유롭게 질문해 보세요!</p>
+
+              <button class="btn blue_gradient" onclick="showActionSheet('#actionSheet02')">
+                <span>질문하기</span>
+              </button>
+
+              <div class="desc">남은 질문 0/3회예요</div>
+            </div>
+            <div class="question_history">
+              <h3>질문 기록</h3>
+              <div class="history_bx">
+                <h4>아직 대화가 시작되지 않았어요</h4>
+                <p>궁금한 게 생기면 언제든 물어보세요!</p>
+              </div>
+            </div>
+          </div>
+          <!-- 하단 버튼 영역 변경 20251115 -->
+          <div class="bottom_nav_wr">
+            <div class="list_num">
+              <div class="btn_list" onclick="showActionSheet('#actionSheet01')">
+                <img src="./resource/images/btn_list.svg" alt="" />
+              </div>
+              <div><b>5/</b> 10</div>
+            </div>
+            <div class="nav_btn">
+              <button class="prev" onclick="goPage('.page_3')">
+                <img src="./resource/images/arrow-left.svg" alt="" />이전
+              </button>
+              <button class="next" onclick="goPage('.page_5')">
+                다음<img src="./resource/images/arrow-left.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- e:page_4 -->
+        <!-- s: page_5 -->
+        <!-- sticky_page 에 on 클래스가 들어오면 body_wr 에게 notScroll 클래스 부여해줘야함 -->
+        <div class="page page_5 sticky_page">
+          <h1>재물운</h1>
+          <div class="page_tab_menu">
+            <ul>
+              <li class="on" data-slide-index="0">올해 풀이</li>
+              <li data-slide-index="1">월별 풀이</li>
+            </ul>
+          </div>
+          <div class="swiper contents_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide contents_slide_item">
+                <div class="manse_txt_wr">
+                  <div class="manse_txt_bx">
+                    <h2>올해 나의 재물운 흐름은 어떨까?</h2>
+                    <div class="txt">
+                      돈과 관련하여 주변 사람들과의 관계에서 큰 문제가 발생하기 쉬운 흐름을 보입니다. 동업이나
+                      금전거래는 독박을 쓰거나 손실로 이어질 가능성이 매우 높고, 사기를 당할 위험도 있습니다. 당신의
+                      재물이 타인의 개입으로 인해 손실될 수 있으니, 돈 문제 앞에서는 친분 관계를 냉철하게 판단하고
+                      신중함을 유지하는 것이 매우 중요한 한 해가 될 것입니다.
+                    </div>
+                  </div>
+                  <div class="manse_txt_bx">
+                    <h2>재물운이 상승하는 시기</h2>
+                    <div class="txt">
+                      2026년 1월, 5월, 11월<br />
+                      특별히 창의력이 샘솟는 이 시기에는 당신의 고유한 끼와 관심사가 금전적 가치를 창출하며 새로운
+                      수익원이 형성되니, 열린 마음으로 다가오는 기회를 맞이하고 당신의 재능을 세상에 드러내는 것이 이
+                      시기의 핵심입니다.
+                    </div>
+                  </div>
+                  <div class="manse_txt_bx">
+                    <h2>조심해야 할 재물운 시기</h2>
+                    <div class="txt">
+                      2026년 3월 <br />지식과 정보를 통해 재물이 증식되는 한 해이지만, 특히 너무 많은 정보에 노출되거나
+                      한 가지 정보에 집착하기 쉬운 시기에는 판단이 흐려져 중요한 투자 기회를 놓치거나 잘못된 선택을 할
+                      수 있습니다. 다양한 관점에서 정보를 분석하고, 급변하는 흐름 속에서 중심을 잃지 않는 것이
+                      중요합니다.
+                    </div>
+                  </div>
+                  <div class="manse_blue_bx">
+                    <p class="info"><img src="./resource/images/icon_info_blue.svg" alt="" />주의할 달만 안내됩니다.</p>
+                    <p class="desc">표시되지 않은 달은 특별한 주의 사항이 없습니다.</p>
+                  </div>
+                </div>
+                <div class="question_wr">
+                  <div class="question_bx">
+                    <div class="question_icon">
+                      <img src="./resource/images/icon_chat.svg" alt="" />
+                    </div>
+                    <h2>최대 3번까지 질문할 수 있어요</h2>
+                    <p>풀이에 대한 궁금증이나, 더 알고 싶은 내용을 자유롭게 질문해 보세요!</p>
+
+                    <button class="btn blue_gradient" onclick="showActionSheet('#actionSheet02')">
+                      <span>질문하기</span>
+                    </button>
+
+                    <div class="desc">남은 질문 0/3회예요</div>
+                  </div>
+                  <div class="question_history">
+                    <h3>질문 기록</h3>
+                    <div class="history_bx">
+                      <h4>아직 대화가 시작되지 않았어요</h4>
+                      <p>궁금한 게 생기면 언제든 물어보세요!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide contents_slide_item">
+                <div class="manse_txt_wr">
+                  <div class="manse_chart_wr">
+                    <h2>월별 재문운 그래프</h2>
+                    <div class="manse_chart_bx">
+                      <div id="area-chart"></div>
+                    </div>
+                  </div>
+                  <div class="manse_txt_bx">
+                    <h2>
+                      1월 (1/5~2/2)
+                      <div class="point">70점</div>
+                    </h2>
+                    <div class="txt">
+                      이 달은 다양한 활동이 요구됩니다. 특히 협력자와 동료들과 함께 하는 것이 매우 중요합니다. 함께
+                      협력하며 일하는 하면 단체로 성공할 수 있습니다. 사람들과의 관계를 유지하고 새로운 친구를 사귀는
+                      데도 행운이 따릅니다. 그럼 더욱 행복한 일을 쌓을 수 있습니다. 적극적으로 참여하고 자신의 능력을
+                      최대한 발휘할 절호의 기회를 놓치지 마세요. 새로운 만남을 통해 더 많은 좋은 경험을 얻게 됩니다.
+                    </div>
+                  </div>
+                  <div class="manse_txt_bx">
+                    <h2>
+                      2월 (2/3~3/4)
+                      <div class="point">40점</div>
+                    </h2>
+                    <div class="txt">
+                      단체생활이 조금 불편하게 느껴질 수 있는 달입니다. 규칙을 따르거나 마음에 맞지 않더라도 리더감을
+                      느낄 수 있습니다. 하지만 행정상 혼잡함이 있고 객관적으로 생각한다면 더욱 나은 방향으로 나아갈 수
+                      있습니다. 낯선 환경 속에서 새로운 경험을 하게 됩니다. 경험을 쌓는다는 마음으로 임한다면, 결과가 더
+                      좋게 나타날 것입니다. 규칙에 따른 연습과 문제 해결에는 큰 도움이 됩니다. 주변 상황에 대한 적응력이
+                      강해지고 미래 발전에 활력받는 달입니다. 아이디어도 확장되어 멀리에서 진전을 보일 것입니다.
+                    </div>
+                  </div>
+                  <div class="manse_txt_bx">
+                    <h2>
+                      12월 (12/6~27/1/4)
+                      <div class="point">62점</div>
+                    </h2>
+                    <div class="txt">
+                      이번 달은 경제적 책임과 금전적 부담으로 인해 스트레스를 느낄 수 있는 고된 시기입니다. 예상치 못한
+                      출장이나 업무가 늘어날 수 있습니다. 금전적으로는 비교적 안정적이지만, 여력이 없는 일이 생길 수
+                      있으니 신중하게 판단해 행동하는 것이 중요합니다. 또한 주변 사람들의 말에 휘말리지 않도록
+                      주의하세요. 친구나 가족과 금전 문제가 생길 수 있으므로, 가벼운 돈 문제를 조심하는 태도가
+                      필요합니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="question_wr">
+                  <div class="question_bx">
+                    <div class="question_icon">
+                      <img src="./resource/images/icon_chat.svg" alt="" />
+                    </div>
+                    <h2>최대 3번까지 질문할 수 있어요</h2>
+                    <p>풀이에 대한 궁금증이나, 더 알고 싶은 내용을 자유롭게 질문해 보세요!</p>
+
+                    <button class="btn blue_gradient" onclick="showActionSheet('#actionSheet02')">
+                      <span>질문하기</span>
+                    </button>
+
+                    <div class="desc">남은 질문 0/3회예요</div>
+                  </div>
+                  <div class="question_history">
+                    <h3>질문 기록</h3>
+                    <!-- history_qna + on 활성화 / qna_bd 인라인 스타일-->
+                    <div class="history_qna on">
+                      <div class="qna_hd">
+                        <h2>Q. 직장에서의 보상·성과금 운이 있나요?</h2>
+                        <button class="btn_acc"><img src="./resource/images/icon_acc_arr_gray.svg" alt="" /></button>
+                      </div>
+                      <div class="qna_bd" style="display: block">
+                        <div class="txt">
+                          올해는 연애운이 서서히 피어오르는 해로, 마치 봄에 꽃봉오리가 터지기 직전과 같아요. 이동운이
+                          약해 먼 거리보다는 가까운 곳에서 좋은 인연을 만날 가능성이 높아요. 하지만 사주에 '육해살'이
+                          있어 연인과의 작은 다툼이 생길 수 있으니, 의견 차이가 있을 때는 상대방의 입장을 먼저
+                          이해하려는 노력이 필요해요. 이 기운을 성장의 계기로 삼아, 당신의 매력을 더 발휘할 수 있는 좋은
+                          기회가 될 거예요.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="history_qna">
+                      <div class="qna_hd">
+                        <h2>Q. 직장에서의 보상·성과금 운이 있나요? 직장에서의 보상·성과금 운이 있나요?</h2>
+                        <button class="btn_acc"><img src="./resource/images/icon_acc_arr_gray.svg" alt="" /></button>
+                      </div>
+                      <div class="qna_bd">
+                        <div class="txt">
+                          올해는 연애운이 서서히 피어오르는 해로, 마치 봄에 꽃봉오리가 터지기 직전과 같아요. 이동운이
+                          약해 먼 거리보다는 가까운 곳에서 좋은 인연을 만날 가능성이 높아요. 하지만 사주에 '육해살'이
+                          있어 연인과의 작은 다툼이 생길 수 있으니, 의견 차이가 있을 때는 상대방의 입장을 먼저
+                          이해하려는 노력이 필요해요. 이 기운을 성장의 계기로 삼아, 당신의 매력을 더 발휘할 수 있는 좋은
+                          기회가 될 거예요.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_nav_wr">
+            <div class="list_num">
+              <div class="btn_list" onclick="showActionSheet('#actionSheet01')">
+                <img src="./resource/images/btn_list.svg" alt="" />
+              </div>
+              <div><b>5/</b> 10</div>
+            </div>
+            <div class="nav_btn">
+              <button class="prev" onclick="goPage('.page_4')">
+                <img src="./resource/images/arrow-left.svg" alt="" />이전
+              </button>
+              <button class="next" onclick="goPage('.page_6')">
+                다음<img src="./resource/images/arrow-left.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- e: page_5 -->
+
+        <!-- s: page_6 -->
+        <div class="page page_6">
+          <!-- 20251115 타이틀 추가 -->
+          <h1>나를 지켜줄 부적</h1>
+          <div class="amulet_txt_wr">
+            <div class="amulet_txt_bx">
+              <h3>홍염살 부적</h3>
+              <div class="amulet_bx">
+                <div class="amulet"><img src="./resource/images/amulet_1.svg" alt="" /></div>
+              </div>
+              <div class="txt_bx">
+                <h4>이런 살이에요</h4>
+                <div class="txt">
+                  홍염살은 사랑과 매력의 불꽃 같은 기운이에요.빛날 땐 사람을 끌어당기는 매력이 넘치지만, 너무 강하면
+                  마음이 흔들리고 인연이 꼬이기도 하죠.
+                </div>
+                <h4>이 부적은 이런 마음을 담았어요</h4>
+                <ul class="list">
+                  <li>진짜 좋은 인연만 들어오게 도와줘요.</li>
+                  <li>감정이 너무 요동치지 않게 안정시켜줘요.</li>
+                  <li>
+                    유혹이나 복잡한 관계는 멀리하게 해줘요.유혹이나 복잡한 관계는 멀리하게 해줘요.유혹이나 복잡한 관계는
+                    멀리하게 해줘요.
+                  </li>
+                </ul>
+              </div>
+              <div class="btn_bx">
+                <button class="btn_amulet">부적 받기</button>
+              </div>
+            </div>
+          </div>
+          <div class="amulet_txt_wr">
+            <div class="amulet_txt_bx">
+              <h3>백호살 부적</h3>
+              <div class="amulet_bx">
+                <div class="amulet"><img src="./resource/images/amulet_1.svg" alt="" /></div>
+              </div>
+              <div class="txt_bx">
+                <h4>이런 살이에요</h4>
+                <div class="txt">
+                  백호살은 강인한 호랑이의 힘이에요.이 기운이 제자리를 찾으면 용기와 리더십이 되지만, 그렇지 않으면
+                  다툼이나 상처로 나타나죠.
+                </div>
+                <h4>이 부적은 이런 마음을 담았어요</h4>
+                <ul class="list">
+                  <li>내 안의 ‘호랑이’를 길들여, 나를 지키는 수호신으로 바꿔줘요.</li>
+                  <li>분노와 불안을 잠재워 평온을 지켜줘요.</li>
+                  <li>위험한 일은 멀리하고, 복된 길로 나아가게 해줘요.</li>
+                </ul>
+              </div>
+              <div class="btn_bx">
+                <button class="btn_amulet">부적 받기</button>
+              </div>
+            </div>
+          </div>
+          <div class="amulet_txt_wr">
+            <div class="amulet_txt_bx">
+              <h3>천살 부적</h3>
+              <div class="amulet_bx">
+                <div class="amulet"><img src="./resource/images/amulet_1.svg" alt="" /></div>
+              </div>
+              <div class="txt_bx">
+                <h4>이런 살이에요</h4>
+                <div class="txt">
+                  천살은 하늘처럼 변화무쌍한 운의 바람이에요.예상치 못한 이별이나 이동, 돌발 상황을 가져오지만, 그 안엔
+                  새로운 시작의 씨앗도 숨어 있어요.
+                </div>
+                <h4>이 부적은 이런 마음을 담았어요</h4>
+                <ul class="list">
+                  <li>갑작스러운 변화 속에서도 나를 잃지 않게 해줘요.</li>
+                  <li>나쁜 기운은 흩어지고, 좋은 바람만 남게 해줘요.</li>
+                  <li>변화가 두렵지 않게, 복이 따라오게 해줘요.</li>
+                </ul>
+              </div>
+              <div class="btn_bx">
+                <button class="btn_amulet">부적 받기</button>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_nav_wr">
+            <div class="list_num">
+              <div class="btn_list" onclick="showActionSheet('#actionSheet01')">
+                <img src="./resource/images/btn_list.svg" alt="" />
+              </div>
+              <div><b>5/</b> 10</div>
+            </div>
+            <div class="nav_btn">
+              <button class="prev" onclick="goPage('.page_5')">
+                <img src="./resource/images/arrow-left.svg" alt="" />이전
+              </button>
+              <button class="next" onclick="goPage('.page_7')">
+                다음<img src="./resource/images/arrow-left.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- e: page_6 -->
+        <!-- s: page_7 -->
+        <div class="page page_7">
+          <!-- s: 20251118 review_info_wr 영역 추가 -->
+          <div class="review_info_wr">
+            <ul class="stars">
+              <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+              <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+              <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+              <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+              <li><img src="./resource/images/icon_star_yellow.svg" alt="" /></li>
+            </ul>
+            <div class="info_txt">
+              <h3>
+                리뷰 쓰고<br />
+                <b>19,800원 받기</b>
+              </h3>
+              <p>베스트 리뷰 선정 시 19,800원 상당</p>
+              <p>사주 총론 상품 무료 증정</p>
+            </div>
+            <button class="btn blue_border btn_h52">리뷰 남기기</button>
+          </div>
+          <!-- e: 20251118  -->
+          <div class="share_info_wr">
+            <div class="share_info_bx">
+              <h3>
+                친구에게<br />
+                신년운세 추천하기
+              </h3>
+              <!-- 20251118 삭제
+              <button>자세히 보기</button> -->
+              <div class="share_btn_wr">
+                <div class="share_btn"><img src="./resource/images/icon_share_kakao.svg" alt="" /></div>
+                <div class="share_btn"><img src="./resource/images/icon_share_x.svg" alt="" /></div>
+                <div class="share_btn"><img src="./resource/images/icon_share_copy.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
+          <div class="sub_card_wr">
+            <h2 class="title">홍길동님을 위한 상품 추천</h2>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">2025년 하반기 운세</h3>
+                <p class="desc">변화가 찾아오는 해, 을사년</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_2.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">2025년 하반기 운세2025년 하반기 운세</h3>
+                <p class="desc">변화가 찾아오는 해, 을사년 변화가 찾아오는 해, 을사년</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_3.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">퇴사 자금 마련 완료</h3>
+                <p class="desc">돈 걱정 끝내는 나만의 재물 폭발 시점</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_4.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">2025년 하반기 운세</h3>
+                <p class="desc">변화가 찾아오는 해, 을사년</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+            <div class="sub_card">
+              <div class="img"><img src="./resource/images/sub_card_img_1.png" alt="" /></div>
+              <div class="info">
+                <h3 class="title">타로로 보는 나의 재물운</h3>
+                <p class="desc">언제쯤 돈 걱정 없이 살 수 있을까?</p>
+                <div class="price"><s>15,000원</s><b>9,500원</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn_wr">
+            <button class="btn light_blue" onclick="goPage('.page_1')">풀이 다시보기</button>
+            <button class="btn blue">홈으로 가기</button>
+          </div>
+        </div>
+        <!-- e: page_4 -->
+      </main>
+      <div class="action_sheet_wr" id="actionSheet01">
+        <div class="action_sheet">
+          <div class="action_sheet_hd" onclick="hideActionSheet('#actionSheet01')">
+            <span class="bar"></span>
+          </div>
+          <div class="action_sheet_title"><h2>목차</h2></div>
+          <div class="action_sheet_bd">
+            <div class="scroll_bd">
+              <div class="table_contents">
+                <ul>
+                  <li>
+                    <span class="no">01</span>
+                    <div class="subject">
+                      <p>나의 사주 명식</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">02</span>
+                    <div class="subject">
+                      <p>사주 종합 분석</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">03</span>
+                    <div class="subject">
+                      <p>합·형·충</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">04</span>
+                    <div class="subject">
+                      <p>재물운</p>
+                      <span>남은 질문 3/3</span>
+                    </div>
+                    <span class="active_tag">보는 중</span>
+                  </li>
+                  <li>
+                    <span class="no">05</span>
+                    <div class="subject">
+                      <p>직장운</p>
+                      <span>남은 질문 3/3</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">06</span>
+                    <div class="subject">
+                      <p>연애운</p>
+                      <span>남은 질문 3/3</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">07</span>
+                    <div class="subject">
+                      <p>대인관계운</p>
+                      <span>남은 질문 3/3</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">08</span>
+                    <div class="subject">
+                      <p>건강운</p>
+                      <span>남은 질문 3/3</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">09</span>
+                    <div class="subject">
+                      <p>월별 상세 풀이</p>
+                      <span>남은 질문 3/3</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="no">10</span>
+                    <div class="subject">
+                      <p>월별 상세 풀이</p>
+                      <span>남은 질문 3/3</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn_wr">
+            <button class="btn light_blue">목차 닫기</button>
+          </div>
+        </div>
+      </div>
+      <div class="action_sheet_wr chat_st" id="actionSheet02">
+        <div class="action_sheet">
+          <div class="action_sheet_hd" onclick="hideActionSheet('#actionSheet02')">
+            <span class="bar"></span>
+          </div>
+          <div class="action_sheet_title chat_st">
+            <h2>재물운 질문</h2>
+            <div class="desc_wr">
+              <div class="remain_info">
+                <p>남은 질문 2/3회예요</p>
+                <div class="dots">
+                  <span class="dot on"></span><span class="dot on"></span><span class="dot"></span>
+                </div>
+              </div>
+              <div class="info_tooltip">
+                <div class="btn_info"><img src="./resource/images/icon_info_tooltip.svg" alt="" /></div>
+                <div class="tooltip">
+                  <h3>질문 이용 안내</h3>
+                  <p>최대 3번까지 무료로 질문할 수 있어요 :)</p>
+                  <p>질문 1개당 1회 차감되며, 대화 내용은 자동 저장돼요!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action_sheet_bd">
+            <div class="chatting_room_wr">
+              <div class="scroll_bd">
+                <div class="chatting_wr">
+                  <div class="no_chat">
+                    풀이에 대한 궁금증이나,<br />
+                    더 알고 싶은 내용을 자유롭게 질문해 보세요!
+                  </div>
+                  <div class="chat_bubble blue">올해 사업을 시작하면 어떨까요?</div>
+                  <div class="chat_bubble gray"><div class="loading"></div></div>
+                  <div class="chat_bubble blue">직장에서의 보상·성과금 운이 있나요?</div>
+                  <div class="chat_bubble gray">
+                    올해는 연애운이 서서히 피어오르는 해로, 마치 봄에 꽃봉오리가 터지기 직전과 같아요. 이동운이 약해 먼
+                    거리보다는 가까운 곳에서 좋은 인연을 만날 가능성이 높아요. 하지만 사주에 '육해살'이 있어 연인과의
+                    작은 다툼이 생길 수 있으니, 의견 차이가 있을 때는 상대방의 입장을 먼저 이해하려는 노력이 필요해요.
+                    이 기운을 성장의 계기로 삼아, 당신의 매력을 더 발휘할 수 있는 좋은 기회가 될 거예요.
+                  </div>
+                  <div class="chat_bubble end">모든 질문이 완료되었습니다. 대화 내용은 자동 저장되었어요!</div>
+                  <div class="chat_bubble error">
+                    <p>응답 중 오류가 발생했습니다.</p>
+                    <button class="btn_refresh">
+                      <img src="./resource/images/icon_refresh_red.svg" alt="" />답변 다시 받기
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="chat_bottom">
+                <div class="recommend_wr">
+                  <h3>추천 질문</h3>
+                  <div class="recommend">
+                    <div class="box">
+                      <!-- 로딩 상태 -->
+                      <!-- <div class="loading"></div> -->
+                      직장에서의 보상·성과금 운이 있나요?
+                    </div>
+                    <div class="refresh"><img src="./resource/images/icon_refresh_gray.svg" alt="" /></div>
+                  </div>
+                </div>
+                <div class="question_input_wr">
+                  <div class="question_input_bx">
+                    <textarea
+                      class="question_input"
+                      rows="1"
+                      placeholder="궁금한 점을 편하게 물어보세요."
+                      id="text"
+                      onInput="this.parentNode.dataset.replicatedValue = this.value"
+                    ></textarea>
+                  </div>
+                  <button class="btn_send" id="btn_send" disabled></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action_sheet_wr" id="actionSheet03">
+        <div class="action_sheet pb_0">
+          <div class="action_sheet_hd" onclick="hideActionSheet('#actionSheet03')">
+            <span class="bar"></span>
+          </div>
+          <div class="action_sheet_bd">
+            <div class="scroll_bd">
+              <div class="search_word_result">
+                <h2>일주</h2>
+                <div class="txt">
+                  '일주'는 내가 태어난 날을 나타내는 두 글자로, 사주 여덟 글자 중 나 자신을 가장 잘 보여주는 핵심적인
+                  부분이에요. 이 두 글자의 조합을 통해 나의 타고난 성격, 배우자와의 관계 그리고 내가 살아가는 개인적인
+                  공간의 모습 등을 파악할 수 있어요.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 20251118 사주 용어 설명 추가 -->
+      <div class="action_sheet_wr" id="actionSheet04">
+        <div class="action_sheet pb_20">
+          <div class="action_sheet_hd" onclick="hideActionSheet('#actionSheet04')">
+            <span class="bar"></span>
+          </div>
+          <div class="action_sheet_title term_desc_st">
+            <h1>사주 용어 설명</h1>
+          </div>
+          <div class="action_sheet_bd">
+            <div class="scroll_bd">
+              <div class="term_desc">
+                <div class="txt">
+                  <p>
+                    하늘의 기운(천간)과 땅의 기운(지지)이 만나 서로 영향을 주고받으며 ‘합’, ‘형’, ‘충’ 같은 흐름이
+                    생깁니다.
+                  </p>
+                  <b>이런 변화는 관계나 감정, 일의 방향에도 영향을 줘요.</b><br />
+                </div>
+                <div class="txt">
+                  <p>
+                    사주 구조에 따라 작용하는 기운의 종류와 개수가 달라집니다. 나의 합·형·충 해석 항목들은 11가지 기운
+                    중, 당신의 사주에서 특히 강하게 작용하는 흐름을 설명했어요.
+                  </p>
+                </div>
+                <div class="txt">
+                  <h3>천간합 (天干合)</h3>
+                  <p>
+                    천간(하늘의 기운, 정신적 영역)끼리 짝을 이루어 결합하는 것. 정신적, 명예적, 목표 지향적인 영역에서의
+                    변화나 결속
+                  </p>
+                </div>
+                <div class="txt">
+                  <h3>지지합 (地支合)</h3>
+                  <p>
+                    지지 (땅의 기운, 현실적 영역) 글자들끼리 짝을 이루어 결합하는 경우를 통칭하는 용어. 삼합, 방합,
+                    육합, 반합 등이 모두 지지합에 속하며, 실제 생활, 환경, 대인관계, 물질적인 일 등 현실적인 영역에서의
+                    협력, 결속, 또는 변화를 의미
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- loading  + on 에 활성화-->
+      <div class="loading_dot on">
+        <div class="loading_inner">
+          <div class="loader_dot"></div>
+          <div class="loading_txt">
+            홍길동님의<br />
+            운세를 분석중이에요!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // bar chart
+      const barData = [14, 14, 14, 54, 60];
+      $(document).ready(function () {
+        setTimeout(function () {
+          $(".loading_dot").removeClass("on");
+          $(".body_wr").removeClass("notScroll");
+        }, 3000);
+
+        // 4초 후에 실행 (로딩 시간 고려)
+        setTimeout(function () {
+          $(".bar_item > .bar > span").each(function (index) {
+            const value = barData[index];
+            $(this).css("width", value + "%");
+          });
+        }, 4000);
+      });
+
+      // 페이지 이동
+      function goPage(el) {
+        $(".page").removeClass("on");
+        $(el).addClass("on");
+        $("html, body").animate(
+          {
+            scrollTop: 0,
+          },
+          300
+        );
+        // 20251118 sticky_page 인지 확인하여 이벤트 처리 하도록 수정
+        if ($(el).hasClass("sticky_page")) {
+          $(".body_wr").addClass("notScroll");
+          $(".sticky_page ").animate(
+            {
+              scrollTop: 0,
+            },
+            300
+          );
+        } else {
+          $(".body_wr").removeClass("notScroll");
+        }
+      }
+
+      // Action Sheet 보이기
+      function showActionSheet(el) {
+        $(el).addClass("active");
+        $(".body_wr").addClass("notScroll");
+      }
+
+      // Action Sheet 감추기
+      function hideActionSheet(el) {
+        $(el).removeClass("active");
+        $(".body_wr").removeClass("notScroll");
+      }
+
+      // 질문하기 input : 164px 까지 input 이 길어지며 이상일 시 스크롤
+      // 입력 시 send 버튼 활성화
+      const questionInput = document.querySelectorAll(".question_input_bx");
+      const btnSend = document.getElementById("btn_send");
+      questionInput.forEach((grower) => {
+        const textarea = grower.querySelector("textarea");
+        if (textarea.value.length > 0) {
+          btnSend.removeAttribute("disabled");
+          grower.dataset.replicatedValue = textarea.value;
+        }
+
+        // 2. input 이벤트 리스너 설정
+        textarea.addEventListener("input", () => {
+          grower.dataset.replicatedValue = textarea.value;
+
+          // on 클래스 토글 기능
+          if (textarea.value.length > 0) {
+            btnSend.removeAttribute("disabled");
+          } else {
+            btnSend.setAttribute("disabled", "true");
+          }
+        });
+      });
+
+      // contents_swiper
+      const swiper = new Swiper(".contents_swiper", {
+        loop: false,
+        speed: 500,
+        autoHeight: true,
+      });
+      // 탭 메뉴 항목 가져오기
+      const tabItems = document.querySelectorAll(".page_tab_menu ul li");
+
+      // 탭 상태 업데이트 함수
+      function updateTabs(activeIndex) {
+        $(".sticky_page ").animate(
+          {
+            scrollTop: 0,
+          },
+          300
+        );
+        tabItems.forEach((li, index) => {
+          if (index === activeIndex) {
+            li.classList.add("on");
+          } else {
+            li.classList.remove("on");
+          }
+        });
+      }
+
+      // 1. 탭 클릭 이벤트: 탭 클릭 시 해당 슬라이드로 이동
+      tabItems.forEach((li, index) => {
+        li.addEventListener("click", () => {
+          // Swiper를 클릭된 탭의 인덱스로 이동시킵니다.
+          swiper.slideTo(index);
+          // UX 개선을 위해 클릭 시 즉시 탭 상태를 업데이트합니다.
+          updateTabs(index);
+        });
+      });
+
+      // 2. Swiper 슬라이드 변경 이벤트: 슬라이드 이동 완료 후 탭 상태 업데이트
+      swiper.on("slideChange", function () {
+        // Swiper의 현재 활성화된 인덱스를 사용하여 탭을 업데이트합니다.
+        updateTabs(swiper.activeIndex);
+      });
+
+      // 초기 로드 시 첫 번째 탭이 활성화되도록 설정
+      document.addEventListener("DOMContentLoaded", () => {
+        updateTabs(swiper.activeIndex);
+      });
+
+      // tailwind chart
+
+      // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+      const getBrandColor = () => {
+        // Get the computed style of the document's root element
+        const computedStyle = getComputedStyle(document.documentElement);
+
+        // Get the value of the --color-brand CSS variable
+        return computedStyle.getPropertyValue("--color-fg-brand").trim() || "#327AE7";
+      };
+
+      const brandColor = getBrandColor();
+
+      const options = {
+        chart: {
+          height: "100%",
+          maxWidth: "100%",
+          type: "area",
+          fontFamily: "pretendard, sans-serif",
+          dropShadow: {
+            enabled: false,
+          },
+          toolbar: {
+            show: false,
+          },
+        },
+        tooltip: {
+          enabled: true,
+          x: {
+            show: true, // 1. x 축 categories 표시를 위해 true로 변경
+          },
+          // 6. 툴팁 형식: categories월:data점
+          custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+            // w.globals.labels (또는 w.globals.categoryLabels)를 사용하여 카테고리 라벨을 가져옵니다.
+            // w.config.xaxis.categories 대신 w.globals.labels를 사용하는 것이 더 안정적입니다.
+            const categories = w.globals.labels;
+            const categoryLabel = categories[dataPointIndex];
+            const dataValue = series[seriesIndex][dataPointIndex];
+
+            // categoryLabel이 undefined인 경우의 대비책 (선택 사항)
+            const displayLabel = categoryLabel !== undefined ? categoryLabel : "N/A";
+
+            return (
+              '<div class="arrow_box" style="">' +
+              "<span>" +
+              displayLabel +
+              "월:" +
+              "</span>" +
+              dataValue +
+              "점" +
+              "</div>"
+            );
+          },
+        },
+        fill: {
+          type: "gradient",
+          gradient: {
+            opacityFrom: 0.55,
+            opacityTo: 0,
+            shade: brandColor,
+            gradientToColors: [brandColor],
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          width: 6,
+        },
+        grid: {
+          show: false,
+          strokeDashArray: 4,
+          padding: {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+          },
+        },
+        series: [
+          {
+            name: "",
+            data: [65, 50, 20, 55, 20, 98, 60, 80, 20, 50, 40, 60],
+            color: brandColor,
+          },
+        ],
+        xaxis: {
+          categories: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+          labels: {
+            show: true, // 1. x 축 categories 표시
+            style: {
+              colors: "#9B9B9B", // 4. x축 label 색상
+              fontSize: "12px", // 4. x축 label font size
+            },
+          },
+          axisBorder: {
+            show: true,
+            color: "#E4E4E4", // 2. x 축 border 색상
+          },
+          axisTicks: {
+            show: false,
+          },
+          tooltip: {
+            enabled: false,
+          },
+        },
+        yaxis: {
+          show: true,
+          min: 0, // 3. 세로축 최소값
+          max: 100, // 3. 세로축 최대값
+          tickAmount: 5, // 3. 0, 20, 40, 60, 80, 100 (6개 = 5칸) 표출
+          labels: {
+            style: {
+              colors: "#9B9B9B", // 4. y축 label 색상
+              fontSize: "12px", // 4. y축 label font size
+            },
+            offsetX: -11, // 5. y 축 라벨과 차트간 사이 여백 (차트 쪽으로 음수 값 사용)
+          },
+        },
+      };
+
+      if (document.getElementById("area-chart") && typeof ApexCharts !== "undefined") {
+        const chart = new ApexCharts(document.getElementById("area-chart"), options);
+        chart.render();
+      }
+
+      // 질문기록 아코디언
+      $(".history_qna .qna_hd").on("click", function () {
+        $(this).parent(".history_qna").toggleClass("on");
+        $(this).siblings(".qna_bd").slideToggle();
+      });
+
+      //단어 검색 + 툴팁 임시 코드 :UI 확인할 수 있는 정도만 스크립트 연결 하였으니 개발단에서 알맞게 활용 부탁드립니다.
+      $(".search_word").on("click", function () {
+        $(".search_word_tooltip").addClass("on");
+      });
+
+      // 2. document 전체에 클릭 이벤트 바인딩
+      $(document).on("click", function (e) {
+        // 클릭된 요소가 .search_word_tooltip의 자손이거나 .search_word_tooltip 그 자신이 아닌 경우
+        // 또한, 클릭된 요소가 .search_word의 자손이거나 .search_word 그 자신이 아닌 경우
+        if (!$(e.target).closest(".search_word_tooltip").length && !$(e.target).closest(".search_word").length) {
+          // .search_word_tooltip 요소에서 'on' 클래스 제거 (툴팁 숨김)
+          $(".search_word_tooltip").removeClass("on");
+        }
+      });
+    </script>
+  </body>
+</html>

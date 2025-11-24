@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+  </head>
+  <body>
+    <div class="body_wr renewal_body_wr">
+      <header>
+        <div class="inner">
+          <div class="prev"><img src="./resource/images/hd_prev_gray.svg" alt="" /></div>
+
+          <h2>결제완료</h2>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="product_wr">
+        <div class="product_intro">
+          <div class="payment_complete_wr">
+            <div class="payment_complete">
+              <h1>결제완료</h1>
+              <b>19,900원</b>
+            </div>
+            <div class="payment_list">
+              <h2>구매 정보</h2>
+              <ul class="list">
+                <li>
+                  <p>주문정보</p>
+                  <p>2026121234559</p>
+                </li>
+                <li>
+                  <p>주문상품</p>
+                  <p>2026년 신년운세</p>
+                </li>
+                <li>
+                  <p>결제금액</p>
+                  <p>19,900원</p>
+                </li>
+                <li>
+                  <p>결제일시</p>
+                  <p>2026.12.12 11:33</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom_btn_wr fixed">
+            <button class="btn light_blue">주문 내역 보기</button>
+            <button class="btn blue">풀이 보기</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

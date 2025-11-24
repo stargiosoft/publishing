@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+  </head>
+  <body>
+    <div class="body_wr renewal_body_wr">
+      <header>
+        <div class="inner">
+          <h1 class="home_gray"><img src="./resource/images/icon_home_gray.svg" alt="" /></h1>
+          <button class="btn_share">공유하고 수익 얻기</button>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="product_wr">
+        <div class="product_intro">
+          <div class="main_visual_img">
+            <div class="horse-container" id="horseContainer">
+              <div class="horse">
+                <img src="./resource/images/horse.png" alt="" />
+              </div>
+            </div>
+            <img src="./resource/images/2026_main.png" alt="" />
+          </div>
+          <div class="product_intro_desc">
+            <h3>2026년, 당신의 한 해를 완성하는 신년 운세</h3>
+            <p>종합운·만세력·월별운까지 한눈에 확인하세요.</p>
+            <p>단 한 번의 해석으로 1년의 방향을 잡을 수 있습니다.</p>
+          </div>
+          <div class="product_intro_txt_wr">
+            <h4>상품 구성</h4>
+            <div class="txt_bx">
+              <dl>
+                <dt><span>01.</span> 올해의 종합운</dt>
+                <dd>한 해를 관통하는 나의 기운</dd>
+              </dl>
+              <dl>
+                <dt><span>02.</span> 만세력 분석</dt>
+                <dd>내 사주의 본성부터 비밀스런 기운까지</dd>
+              </dl>
+              <dl>
+                <dt><span>03.</span> 재물운</dt>
+                <dd>돈이 붙는 타이밍, 잃기 쉬운 순간</dd>
+              </dl>
+              <dl>
+                <dt><span>04.</span> 직장운</dt>
+                <dd>진짜 나에게 맞는 무대, 빛날 타이밍을 만나는 해</dd>
+              </dl>
+              <dl>
+                <dt><span>05.</span> 연애운</dt>
+                <dd>진짜 나에게 맞는 무대, 빛날 타이밍을 만나는 해</dd>
+              </dl>
+              <dl>
+                <dt><span>06.</span> 연애운</dt>
+                <dd>진짜 나에게 맞는 무대, 빛날 타이밍을 만나는 해</dd>
+              </dl>
+              <dl>
+                <dt><span>07.</span> 연애운</dt>
+                <dd>진짜 나에게 맞는 무대, 빛날 타이밍을 만나는 해</dd>
+              </dl>
+            </div>
+            <div class="btn_more"><span>더보기</span></div>
+          </div>
+          <div class="info_form">
+            <div class="title">
+              <h3>사주 정보 입력</h3>
+            </div>
+
+            <div class="form_item">
+              <h4>이름</h4>
+              <div class="item">
+                <input type="text" placeholder="이름 입력" />
+              </div>
+            </div>
+            <div class="form_item">
+              <h4>성별</h4>
+              <div class="item">
+                <div class="btn_radio">
+                  <div class="radio">
+                    <input type="radio" name="gender" id="rad01" />
+                    <label for="rad01">여성</label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="gender" id="rad02" />
+                    <label for="rad02">남성</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form_item">
+              <h4>생년월일 (양력 기준으로 입력해 주세요)</h4>
+              <div class="item">
+                <input type="text" placeholder="2025.02.09" />
+              </div>
+            </div>
+            <div class="form_item">
+              <h4>태어난 시</h4>
+              <div class="item">
+                <input type="text" placeholder="21:00" />
+                <!-- class on 추가 시 버튼 활성화 -->
+                <button class="btn_sm">시간 모름</button>
+              </div>
+            </div>
+          </div>
+          <!-- 20251027 버튼 추가 -->
+          <div class="bottom_btn_wr col fixed">
+            <button class="btn_primary">내 운세 보기</button>
+            <button class="btn_txt">구매한 운세 다시 볼래요!</button>
+          </div>
+        </div>
+      </main>
+      <!-- <footer>
+        <div class="inner">
+          <h2>(주)스타지오소프트</h2>
+          <p class="copy">Copyright 2024@Stargiosoft All Rights Reserved.</p>
+          <ul class="info">
+            <li>대표자 서지현 | 사업자등록번호 827-88-01815</li>
+            <li>통신판매업번호 2024-서울영등포-2084</li>
+            <li>서울시 영등포구 양평로 149, 1507호</li>
+            <li>문의 fship1124@stargio.co.kr (010-3702-0428)</li>
+          </ul>
+          <ul class="links">
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보 처리방침</a></li>
+          </ul>
+        </div>
+      </footer> -->
+    </div>
+    <script>
+      // 상품구성 여닫기
+      $(".btn_more").on("click", function () {
+        if ($(".btn_more").hasClass("on")) {
+          $(".txt_bx").removeClass("open");
+          $(".btn_more span").text("더보기");
+          $(this).removeClass("on");
+        } else {
+          $(".txt_bx").addClass("open");
+          $(".btn_more span").text("접기");
+          $(this).addClass("on");
+        }
+      });
+
+      // 관심 on/off
+      $(".btn_heart").on("click", function () {
+        $(this).toggleClass("on");
+      });
+
+      // ** 사주 정보 입력 **
+      //form_item 클릭 시 활성화
+      $(".form_item").on("click", function () {
+        $(".form_item").removeClass("on");
+        $(this).addClass("on");
+      });
+
+      //드롭다운
+      $(".dropdown .value").on("click", function () {
+        $(this).parent(".dropdown").toggleClass("on");
+      });
+      //드롭다운 영역에서 마우스 벗어나면 닫힘
+      $(".dropdown").on("mouseleave", function () {
+        $(".dropdown").removeClass("on");
+      });
+      //드롭다운  옵션 선택 시 닫히면서 value 값 변경
+      $(".dropdown .options li").on("click", function () {
+        const selected = $(this).text();
+        $(this).parent().siblings(".value").text(selected);
+        $(".dropdown").removeClass("on");
+      });
+
+      //btn_sm 활성화
+      $(".btn_sm").on("click", function () {
+        $(this).toggleClass("on");
+      });
+
+      // 말 애니메이션 속도 : 기본 5초
+      const speed = 5; //(5초)
+      // 말 움직임 후에 멈춤
+      setTimeout(function () {
+        $(".horse").addClass("end");
+      }, speed * 1000);
+      $(".horse-container").css("animation-duration", `${speed}s`);
+    </script>
+  </body>
+</html>

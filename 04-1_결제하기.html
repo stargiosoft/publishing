@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ↓ jquery -->
+    <script src="./resource/library/jquery-3.7.1.min.js"></script>
+    <!-- ↓ 공통 스크립트 -->
+    <script src="./resource/js/common.js"></script>
+
+    <!-- ↓ 공통 스타일 -->
+    <link rel="stylesheet" href="./resource/css/style.css" />
+  </head>
+  <body>
+    <div class="body_wr renewal_body_wr">
+      <header>
+        <div class="inner">
+          <div class="prev"><img src="./resource/images/hd_prev_gray.svg" alt="" /></div>
+
+          <h2>결제하기</h2>
+          <div class="menu" onclick="slideMenuHandler()">
+            <img src="./resource/images/icon_menu_gray.svg" alt="메뉴열기" />
+          </div>
+        </div>
+      </header>
+      <div class="slide_menu_wr">
+        <div class="slide_menu">
+          <div class="close" onclick="slideMenuHandler()"><img src="./resource/images/icon_close.svg" alt="" /></div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>홍길동</h3>
+              <button>수정</button>
+            </div>
+            <ul class="date">
+              <li>양력 1996년 10월 23일 丑시</li>
+              <li><b>토끼띠 여성</b></li>
+            </ul>
+            <div class="btn_wr">
+              <button>관심목록</button>
+              <button>구매내역</button>
+            </div>
+          </div>
+          <ul class="slide_nav">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 만세력</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <div class="sign_wr">
+            <button class="kakao">
+              <i><img src="./resource/images/icon_kakao.svg" alt="" /></i>카카오톡 채널 추가
+            </button>
+            <button>로그아웃</button>
+          </div>
+          <div class="user_info_bx">
+            <div class="name">
+              <h3>로그인이 필요합니다.</h3>
+            </div>
+            <button class="login">로그인하러 가기</button>
+          </div>
+        </div>
+      </div>
+      <div class="dim" onclick="slideMenuHandler()"></div>
+      <main class="product_wr">
+        <div class="product_intro">
+          <div class="payment_info_wr">
+            <div class="product_info_bx">
+              <h2>운세 상품</h2>
+              <div class="product">
+                <div class="img">
+                  <img src="./resource/images/product_info_bx_sample.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h3>내 연인은 바람기 있을까?</h3>
+                  <div class="price">
+                    <s>25,000원</s>
+                    <b>19,900원</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment_info_bx">
+              <div class="payment_list">
+                <h2>결제 금액</h2>
+                <ul class="list">
+                  <li>
+                    <p>상품 금액</p>
+                    <b>25,000원</b>
+                  </li>
+                  <li>
+                    <p>기본 할인</p>
+                    <b>-5,100원</b>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="total_price">
+                <b>총 결제 금액</b>
+                <b class="primary">12,900원</b>
+              </div>
+              <div class="payment_btn_wr">
+                <h2>결제 수단</h2>
+                <button>신용 · 체크카드</button>
+                <button class="kakao_pay"><img src="./resource/images/kakao_pay.svg" alt="" /></button>
+              </div>
+            </div>
+            <div class="payment_terms">
+              <h3>결제 금액과 안내 사항을 확인했어요</h3>
+              <p>개인정보 수집 이용 동의</p>
+              <ul>
+                <li>
+                  수집 및 이용 목적
+                  <ul class="disc">
+                    <li>
+                      개인 맞춤형 운세 콘텐츠 생성 및 제공, 유료 서비스 이용에 따른 계약 이행, AI 콘텐츠 준비 완료 시
+                      알림톡 발송, 고객 문의 응대 및 불만 처리 등 원활한 서비스 이용을 위한 본인 확인
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  수집하는 개인정보 항목
+                  <ul class="disc">
+                    <li>회원 식별 정보: 이름, 이메일, 휴대전화번호</li>
+                    <li>콘텐츠 생성 정보: 생년월일, 태어난 시, 성별</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
