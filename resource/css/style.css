@@ -204,6 +204,7 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   word-break: keep-all;
+  width: 100%;
 }
 
 /* common */
@@ -682,6 +683,11 @@ footer .links li a {
 .btn.blue_border {
   background: #fff;
   border-color: #327ae7;
+  color: #327ae7;
+}
+.btn.blue_border_2 {
+  background: #fff;
+  border-color: #3697ff;
   color: #327ae7;
 }
 .btn.btn_secondary {
@@ -10448,6 +10454,12 @@ footer .links li a {
   padding-bottom: 176px;
   padding-top: 48px;
 }
+.renewal_body_wr .product_wr.pb_60 {
+  padding-bottom: 60px;
+}
+.renewal_body_wr .product_wr.pb_76 {
+  padding-bottom: 76px;
+}
 .renewal_body_wr .slide_menu_wr.on {
   right: calc(50% - 330px);
 }
@@ -10850,9 +10862,19 @@ footer .links li a {
 .product_wr .page.on {
   display: block;
 }
+.product_wr .page .img_cont {
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 108px);
+}
+.product_wr .page .img_cont.fit {
+  height: calc(100vh - 108px);
+}
 .product_wr .page .img_cont img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .product_wr .page h1 {
@@ -10887,6 +10909,7 @@ footer .links li a {
 .product_wr .page .bottom_btn_wr .btn.light_blue {
   color: #327ae7;
   background: #e7f4ff;
+  border-color: #e7f4ff;
 }
 .product_wr .page .sub_card_wr {
   margin-top: 48px;
@@ -10918,11 +10941,20 @@ footer .links li a {
 .bottom_btn_wr .btn.light_blue {
   color: #327ae7;
   background: #e7f4ff;
+  border-color: #e7f4ff;
 }
 .bottom_btn_wr .btn:disabled {
   cursor: default;
   background: #f8f8f8;
+  border-color: #f8f8f8;
   color: #b7b7b7;
+}
+
+.body_wr .bottom_btn_wr {
+  max-width: 750px;
+}
+.body_wr.renewal_body_wr .bottom_btn_wr {
+  max-width: 660px;
 }
 
 .manse_wr .manse_plus {
@@ -11333,7 +11365,6 @@ h1 + .amulet_txt_wr {
   font-weight: 400;
 }
 .share_info_wr .share_info_bx .share_btn_wr {
-  margin-top: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11643,8 +11674,10 @@ h1 + .amulet_txt_wr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   width: 100%;
+  height: calc(100vh - 124px);
 }
 .select_subject_wr .progress p {
   margin-bottom: 8px;
@@ -11721,6 +11754,34 @@ h1 + .amulet_txt_wr {
   border-color: #327ae7;
   background: #eff6ff;
   color: #327ae7;
+}
+@media (max-height: 775px) {
+  .select_subject_wr .cont {
+    height: 100%;
+  }
+  .select_subject_wr .cont_bx {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .select_subject_wr .cont_bx .select_wr {
+    padding-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .select_subject_wr .cont_bx .select_wr .img,
+  .select_subject_wr .cont_bx .select_wr h3 {
+    margin-bottom: 0;
+  }
+  .select_subject_wr .cont_bx .select_wr .btn_radio_wr {
+    width: 100%;
+  }
 }
 
 .common_modal_wr {
@@ -11808,6 +11869,7 @@ h1 + .amulet_txt_wr {
 .bottom_nav_wr .list_num .btn_list {
   width: 36px;
   height: 36px;
+  cursor: pointer;
 }
 .bottom_nav_wr .nav_btn {
   display: flex;
@@ -12009,13 +12071,13 @@ h1 + .amulet_txt_wr {
   text-align: center;
   font-size: 15px;
   font-weight: 400;
-  color: #1f1f1f;
+  color: #a3a3a3;
 }
 .question_wr .question_history .history_bx h4 {
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
-  color: #333333;
+  color: #a3a3a3;
 }
 
 .btn.blue_gradient {
@@ -12077,6 +12139,9 @@ h1 + .amulet_txt_wr {
 .action_sheet_wr.active .action-options {
   bottom: 0;
 }
+.action_sheet_wr.active .action_sheet {
+  bottom: 0;
+}
 .action_sheet_wr.chat_st .action_sheet {
   padding-bottom: 0;
 }
@@ -12097,7 +12162,12 @@ h1 + .amulet_txt_wr {
   background: #fff;
   border-radius: 16px 16px 0 0;
   padding-bottom: 76px;
-  max-height: calc(100vh - 48px);
+  max-height: calc(100% - 148px);
+  bottom: 100vh;
+  position: relative;
+  bottom: -300px;
+  transition: 1s;
+  width: 100%;
 }
 .action_sheet_wr .action_sheet.pb_0 {
   padding-bottom: 0;
@@ -12202,11 +12272,13 @@ h1 + .amulet_txt_wr {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .action_sheet_wr .action_sheet_hd .bar {
   width: 48px;
   height: 4px;
   background: #d4d4d4;
+  border-radius: 100px;
 }
 .action_sheet_wr .action_sheet_bd {
   padding-right: 4px;
@@ -12216,6 +12288,15 @@ h1 + .amulet_txt_wr {
   padding-left: 20px;
   overflow-y: auto;
   max-height: calc(100vh - 212px);
+}
+@media (max-width: 660px) {
+  .action_sheet_wr {
+    left: 0;
+    right: 0;
+    transform: initial;
+    max-width: initial;
+    width: 100%;
+  }
 }
 
 .search_word_result {
@@ -12236,11 +12317,11 @@ h1 + .amulet_txt_wr {
 }
 
 .table_contents li {
+  cursor: pointer;
   display: flex;
   align-items: center;
-  height: 56px;
   border-bottom: 1px solid #f3f3f3;
-  padding: 0 36px 0 12px;
+  padding: 12px 36px 12px 12px;
   gap: 8px;
   background: url(../images/table_contents_arr.svg) no-repeat right 12px center/16px;
 }
@@ -12263,7 +12344,7 @@ h1 + .amulet_txt_wr {
   font-size: 12px;
   color: #7d7d7d;
   font-weight: 400;
-  line-height: 1;
+  line-height: 14px;
 }
 .table_contents li .active_tag {
   height: 24px;
@@ -12305,6 +12386,8 @@ h1 + .amulet_txt_wr {
   line-height: 27px;
   max-width: 500px;
   width: auto;
+  word-break: break-all;
+  letter-spacing: -0.02em;
 }
 .chatting_wr .chat_bubble .loading {
   margin: 3px 0 3px;
@@ -12489,7 +12572,7 @@ h1 + .amulet_txt_wr {
   height: 50px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 8;
   background: #fff;
 }
 .page_tab_menu ul {
@@ -12550,7 +12633,7 @@ h1 + .amulet_txt_wr {
   font-size: 15px;
   font-weight: 400;
   color: #1f1f1f;
-  font-weight: 28px;
+  line-height: 28.5px;
   padding: 0 20px 20px;
 }
 .history_qna .qna_bd .txt {
@@ -12716,6 +12799,9 @@ h1 + .amulet_txt_wr {
 .visual_detail_container .user_review_info .blue_border img {
   width: 16px;
   height: 16px;
+}
+.visual_detail_container .visual_detail_cont {
+  margin-top: -1px;
 }
 .visual_detail_container .visual_detail_cont img {
   width: 100%;
@@ -13170,6 +13256,7 @@ h1 + .amulet_txt_wr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 9;
 }
 .visual_detail_container .bottom_btn_wr .price {
   color: #aeaeae;
@@ -13434,4 +13521,70 @@ h1 + .amulet_txt_wr {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.price_info_wr .price_info_bx {
+  padding: 12px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.price_info_wr .price_info_bx li {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #151515;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23.5px;
+}
+.price_info_wr .price_info_bx li b {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.price_info_wr .price_info_bx li p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.price_info_wr .price_info_bx li span {
+  line-height: 25px;
+  border-radius: 10px;
+  background: #e7366e;
+  color: #fff;
+  padding: 0 9px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.price_info_wr .price_info_bx li.total_price {
+  margin-top: 8px;
+  background: #f9f9f9;
+  padding: 24px 28px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.price_info_wr .price_info_bx li.total_price b {
+  color: #327ae7;
+  font-size: 18px;
+}
+.price_info_wr .btn_wr {
+  padding-bottom: 12px;
+}
+.price_info_wr .btn_wr .text_link {
+  line-height: 34px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: #8b8b8b;
+}
+.price_info_wr .bottom_btn_wr {
+  position: relative;
+  bottom: initial;
+  left: initial;
+  transform: initial;
+  box-shadow: none;
+  gap: 8px;
 }

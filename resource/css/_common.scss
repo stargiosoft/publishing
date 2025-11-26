@@ -34,6 +34,7 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   word-break: keep-all;
+  width: 100%;
 }
 
 /* common */
@@ -511,6 +512,11 @@ footer {
   &.blue_border {
     background: #fff;
     border-color: #327ae7;
+    color: #327ae7;
+  }
+  &.blue_border_2 {
+    background: #fff;
+    border-color: #3697ff;
     color: #327ae7;
   }
   &.btn_secondary {
