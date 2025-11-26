@@ -298,9 +298,12 @@
         <!-- e: page_1 -->
 
         <!-- s: page_2 -->
-        <div class="page page_2">
-          <div class="img_cont">
-            <img src="./resource/images/sin_cover.png" alt="" />
+        <!-- 20251125 h_full 추가(이미지영역) -->
+        <div class="page page_2 h_full">
+          <div class="img_cont fit">
+            <!-- 20251125 fit 추가 -->
+            <!-- jpg로 변경 20251125 -->
+            <img src="./resource/images/sin_cover.jpg" alt="" />
           </div>
           <div class="bottom_nav_wr">
             <div class="list_num">
@@ -321,7 +324,8 @@
         </div>
         <!-- e: page_2 -->
         <!-- s: page_3 -->
-        <div class="page page_3">
+        <!-- 20251125 h_full 추가(이미지영역) -->
+        <div class="page page_3 h_full">
           <div class="img_cont">
             <img src="./resource/images/sin_intro.png" alt="" />
           </div>
@@ -398,7 +402,7 @@
               <h2>최대 3번까지 질문할 수 있어요</h2>
               <p>풀이에 대한 궁금증이나, 더 알고 싶은 내용을 자유롭게 질문해 보세요!</p>
 
-              <button class="btn blue_gradient" onclick="showActionSheet('#actionSheet02')">
+              <button class="btn blue_border_2" onclick="showActionSheet('#actionSheet02')">
                 <span>질문하기</span>
               </button>
 
@@ -472,10 +476,11 @@
                       중요합니다.
                     </div>
                   </div>
+                  <!-- 20251115 주의할 달 안내 문구 제거
                   <div class="manse_blue_bx">
                     <p class="info"><img src="./resource/images/icon_info_blue.svg" alt="" />주의할 달만 안내됩니다.</p>
                     <p class="desc">표시되지 않은 달은 특별한 주의 사항이 없습니다.</p>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="question_wr">
                   <div class="question_bx">
@@ -617,8 +622,88 @@
           </div>
         </div>
         <!-- e: page_5 -->
+        <!-- s: page_6 20251125 월별 주의할 점 페이지 추가-->
+        <div class="page page_6">
+          <h1>월별 주의할 점</h1>
+          <div class="manse_txt_wr">
+            <div class="manse_blue_bx">
+              <p class="info"><img src="./resource/images/icon_info_blue.svg" alt="" />주의할 달만 안내됩니다.</p>
+              <p class="desc">표시되지 않은 달은 특별한 주의 사항이 없습니다.</p>
+            </div>
+            <div class="manse_txt_bx">
+              <h2>2월 (2/3~3/4)</h2>
+              <div class="txt">
+                인유원진이 이 시기에 왔으니, 연인이나 배우자를 존중하고 이해하려는 태도가 부족해질 수 있습니다.
+                상대방과의 소통에 조금 더 신경을 쓰는 것이 중요합니다. 직장에서는 반복일의 늘어남고, 지엽에 쉽게
+                발끈하며 다툼이 증가할 수 있습니다. 부드럽게 의견을 나누고, 긍정적인 태도로 대처하려는 노력이
+                필요합니다.<br />
+                인맥을 이루고 문서운이 발생하며 새로운 제안이 늘어납니다. 시험, 승진, 계약 등에서 기회가 따르는
+                달입니다. 업무도 점진적으로 안정한 쪽을 찾고 만족도 상승합니다. 애정운은 촉소되어 이별수가 강해지고
+                외로움이 따를 수 있습니다.
+              </div>
+            </div>
+            <div class="manse_txt_bx">
+              <h2>3월 (3/4~4/3)</h2>
+              <div class="txt">
+                가까운 사람들과의 이별의 기운이 느껴지는 달입니다. 감정적으로나 금전적으로 예상치 못한 변신이 있을 수
+                있습니다. 이성 간의 만남은 주로 사람들의 긍정적인 만남을 것이 좋습니다. 사랑하는 사람의 시선과 태도에 큰
+                실망을 느낄 수 있습니다. 한편 직장에서는 기존일을 정리하거나 연인이나 배우자와의 관계에서 어려움이
+                발생할 수 있습니다. 남편의 도움을 받는 경우도 있고 의외의 만남이 생길 수 있는 달입니다.
+              </div>
+            </div>
+            <div class="manse_txt_bx">
+              <h2>7월 (7/5~8/6)</h2>
+              <div class="txt">
+                요미합을 이루니 업무능력이 크게 확장되어 주변에서도 인정받고 진로가 더 밝아지는 달입니다. 그러나
+                업무량의 증가로 책임감도 커지므로 심적 압박이 느껴질 수 있습니다. 작은 실수 하나로도 경쟁자에게 자리를
+                내줄 수도 있는 상황이 발생할 수 있으니 항상 긴장을 유지하는 것이 중요합니다.
+              </div>
+            </div>
+          </div>
+          <div class="question_wr">
+            <div class="question_bx">
+              <div class="question_icon">
+                <img src="./resource/images/icon_chat.svg" alt="" />
+              </div>
+              <h2>최대 3번까지 질문할 수 있어요</h2>
+              <p>풀이에 대한 궁금증이나, 더 알고 싶은 내용을 자유롭게 질문해 보세요!</p>
 
-        <!-- s: page_6 -->
+              <button class="btn blue_border_2" onclick="showActionSheet('#actionSheet02')">
+                <span>질문하기</span>
+              </button>
+
+              <div class="desc">남은 질문 0/3회예요</div>
+            </div>
+            <div class="question_history">
+              <h3>질문 기록</h3>
+              <div class="history_bx">
+                <h4>아직 대화가 시작되지 않았어요</h4>
+                <p>궁금한 게 생기면 언제든 물어보세요!</p>
+              </div>
+            </div>
+          </div>
+          <!-- 하단 버튼 영역 변경 20251115 -->
+          <div class="bottom_nav_wr">
+            <div class="list_num">
+              <div class="btn_list" onclick="showActionSheet('#actionSheet01')">
+                <img src="./resource/images/btn_list.svg" alt="" />
+              </div>
+              <div><b>5/</b> 10</div>
+            </div>
+            <div class="nav_btn">
+              <button class="prev" onclick="goPage('.page_5')">
+                <img src="./resource/images/arrow-left.svg" alt="" />이전
+              </button>
+              <button class="next" onclick="goPage('.page_7')">
+                다음<img src="./resource/images/arrow-left.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- e:page_6 -->
+
+        <!-- s: page_7 -->
+        <!-- 20251125 page_7 로 수정 -->
         <div class="page page_6">
           <!-- 20251115 타이틀 추가 -->
           <h1>나를 지켜줄 부적</h1>
@@ -705,18 +790,18 @@
               <div><b>5/</b> 10</div>
             </div>
             <div class="nav_btn">
-              <button class="prev" onclick="goPage('.page_5')">
+              <button class="prev" onclick="goPage('.page_6')">
                 <img src="./resource/images/arrow-left.svg" alt="" />이전
               </button>
-              <button class="next" onclick="goPage('.page_7')">
+              <button class="next" onclick="goPage('.page_8')">
                 다음<img src="./resource/images/arrow-left.svg" alt="" />
               </button>
             </div>
           </div>
         </div>
-        <!-- e: page_6 -->
-        <!-- s: page_7 -->
-        <div class="page page_7">
+        <!-- e: page_7 -->
+        <!-- s: page_8 20251125 페이지 추가 되며  page_8로 변경-->
+        <div class="page page_8">
           <!-- s: 20251118 review_info_wr 영역 추가 -->
           <div class="review_info_wr">
             <ul class="stars">
@@ -822,14 +907,17 @@
                     <span class="no">02</span>
                     <div class="subject">
                       <p>사주 종합 분석</p>
+                      <!-- 20251125 추가 -->
+                      <span>남은 질문 3/3</span>
                     </div>
                   </li>
+                  <!-- 20251125 삭제
                   <li>
                     <span class="no">03</span>
                     <div class="subject">
                       <p>합·형·충</p>
                     </div>
-                  </li>
+                  </li> -->
                   <li>
                     <span class="no">04</span>
                     <div class="subject">
@@ -1078,6 +1166,7 @@
           300
         );
         // 20251118 sticky_page 인지 확인하여 이벤트 처리 하도록 수정
+        // 20251125 h_full 클래스 추가하여 전체화면 페이지인지 확인
         if ($(el).hasClass("sticky_page")) {
           $(".body_wr").addClass("notScroll");
           $(".sticky_page ").animate(
@@ -1086,8 +1175,11 @@
             },
             300
           );
+        } else if ($(el).hasClass("h_full")) {
+          $(".product_wr").addClass("pb_60");
         } else {
           $(".body_wr").removeClass("notScroll");
+          $(".product_wr").removeClass("pb_60");
         }
       }
 
@@ -1131,7 +1223,8 @@
       const swiper = new Swiper(".contents_swiper", {
         loop: false,
         speed: 500,
-        autoHeight: true,
+        // 20251125 주석처리
+        // autoHeight: true,
       });
       // 탭 메뉴 항목 가져오기
       const tabItems = document.querySelectorAll(".page_tab_menu ul li");
@@ -1241,7 +1334,7 @@
           enabled: false,
         },
         stroke: {
-          width: 6,
+          width: 5, // 20251125 라인 차트 선 width 조정
         },
         grid: {
           show: false,
@@ -1320,6 +1413,34 @@
           $(".search_word_tooltip").removeClass("on");
         }
       });
+
+      $(document).ready(function () {
+        $(".action_sheet_wr").on("click", function (event) {
+          if (!$(event.target).closest(".action_sheet").length) {
+            hideActionSheet(".action_sheet_wr");
+          }
+        });
+      });
+
+      // 스크립트로 브라우저의 세로 값 계산 : 키보드 올라올 때 높이 조절을 위함
+      if (window.visualViewport) {
+        const actionSheet = document.querySelector(".action_sheet_wr");
+
+        function setVisualHeight() {
+          // visualViewport.height는 키보드를 제외한 순수한 가시 영역 높이를 반환합니다.
+          actionSheet.style.height = window.visualViewport.height + "px";
+        }
+
+        // 초기 설정
+        setVisualHeight();
+
+        // 크기 변경 이벤트(키보드 활성화/비활성화)에 리스너 등록
+        window.visualViewport.addEventListener("resize", setVisualHeight);
+      } else {
+        // visualViewport를 지원하지 않는 경우, window.innerHeight를 폴백으로 사용
+        // (위의 jQuery 예시와 동일)
+        $(window).on("resize", setActionSheetHeight);
+      }
     </script>
   </body>
 </html>
