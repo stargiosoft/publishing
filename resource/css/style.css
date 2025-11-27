@@ -10862,10 +10862,13 @@ footer .links li a {
 .product_wr .page.on {
   display: block;
 }
+.product_wr .page.h_full .bottom_nav_wr {
+  box-shadow: none;
+}
 .product_wr .page .img_cont {
   width: 100%;
   height: 100%;
-  min-height: calc(100vh - 108px);
+  height: calc(100vh - 108px);
 }
 .product_wr .page .img_cont.fit {
   height: calc(100vh - 108px);
@@ -12127,14 +12130,12 @@ h1 + .amulet_txt_wr {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: 1s;
+  transition: visibility 0.3s;
   visibility: hidden;
-  opacity: 0;
   z-index: 100;
 }
 .action_sheet_wr.active {
   visibility: visible;
-  opacity: 1;
 }
 .action_sheet_wr.active .action-options {
   bottom: 0;
@@ -12161,12 +12162,11 @@ h1 + .amulet_txt_wr {
 .action_sheet_wr .action_sheet {
   background: #fff;
   border-radius: 16px 16px 0 0;
-  padding-bottom: 76px;
   max-height: calc(100% - 148px);
   bottom: 100vh;
   position: relative;
-  bottom: -300px;
-  transition: 1s;
+  bottom: -100vh;
+  transition: bottom 0.3s;
   width: 100%;
 }
 .action_sheet_wr .action_sheet.pb_0 {
@@ -12288,6 +12288,12 @@ h1 + .amulet_txt_wr {
   padding-left: 20px;
   overflow-y: auto;
   max-height: calc(100vh - 212px);
+}
+.action_sheet_wr .bottom_btn_wr {
+  position: relative;
+  bottom: initial;
+  left: initial;
+  transform: initial;
 }
 @media (max-width: 660px) {
   .action_sheet_wr {
