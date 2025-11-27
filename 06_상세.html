@@ -66,16 +66,7 @@
       <main class="product_wr">
         <div class="visual_detail_container">
           <div class="visual_wr">
-            <!-- 20251125 playsinline
-              webkit-playsinline 옵션 추가 -->
-            <video
-              autoplay
-              muted
-              loop
-              poster="./resource/images/detail_visual_thumnail.png"
-              playsinline
-              webkit-playsinline
-            >
+            <video autoplay muted loop poster="./resource/images/detail_visual_thumnail.png">
               <source src="./resource/video/detail_visual_video.mp4" type="video/mp4" />
             </video>
           </div>
@@ -362,19 +353,6 @@
                   </div>
                 </div>
               </div>
-              <!-- 20251125 추가 -->
-              <div class="history_qna">
-                <div class="qna_hd">
-                  <h2>Q. 궁금한 게 더 생기면 어떻게 하나요?</h2>
-                  <button class="btn_acc"><img src="./resource/images/icon_acc_arr_gray.svg" alt="" /></button>
-                </div>
-                <div class="qna_bd">
-                  <div class="txt">
-                    걱정 마세요! 주제별로 3회까지 AI에게 추가 질문하실 수 있어요. 추가 비용 없이 내 사주에 맞춘 맞춤
-                    답변을 받을 수 있으니, 궁금한 건 뭐든 물어보세요!
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="refund_info_wr">
               <h3>걱정 마세요.<br />마음에 들지 않으면<br /><b>100% 환불해드려요!</b></h3>
@@ -386,7 +364,7 @@
                 <s>30,000원</s>
                 <b>19,800원</b>
               </div>
-              <button class="btn btn_primary" onclick="showActionSheet('#actionSheet01')">
+              <button class="btn btn_primary">
                 지금 바로 구매<img src="./resource/images/icon_flash.svg" alt="" />
               </button>
             </div>
@@ -394,45 +372,8 @@
         </div>
       </main>
     </div>
-    <!-- 20251126 결제하기 추가 -->
-    <div class="action_sheet_wr" id="actionSheet01">
-      <div class="action_sheet pb_0">
-        <div class="action_sheet_hd" onclick="hideActionSheet('#actionSheet01')">
-          <span class="bar"></span>
-        </div>
-        <div class="action_sheet_title"><h2>결제하기</h2></div>
-        <div class="action_sheet_bd">
-          <div class="price_info_wr">
-            <ul class="price_info_bx">
-              <li>
-                <p>상품 금액</p>
-                <b>30,000원</b>
-              </li>
-              <li>
-                <p>할인 금액 <span>나다운세 오픈기념</span></p>
-                <b> -10,200원</b>
-              </li>
-              <li class="total_price">
-                <p>총 결제 금액</p>
-                <b>19,800원</b>
-              </li>
-            </ul>
-            <div class="btn_wr">
-              <div class="bottom_btn_wr">
-                <button class="btn light_blue">비회원 구매</button>
-                <button class="btn blue">로그인하기</button>
-              </div>
-              <a href="" class="text_link">구매한 운세 다시 볼래요!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <script>
       var swiper = new Swiper(".reviewSwiper", {
-        slidesPerView: "auto",
-        freeMode: true,
-        loop: true,
         pagination: {
           el: ".swiper-pagination",
         },
@@ -443,46 +384,6 @@
         $(this).parent(".history_qna").toggleClass("on");
         $(this).siblings(".qna_bd").slideToggle();
       });
-
-      // 20251125 Action Sheet 관련 스크립트 추가
-      // Action Sheet 보이기
-      function showActionSheet(el) {
-        $(el).addClass("active");
-        $(".body_wr").addClass("notScroll");
-      }
-
-      // Action Sheet 감추기
-      function hideActionSheet(el) {
-        $(el).removeClass("active");
-        $(".body_wr").removeClass("notScroll");
-      }
-      $(document).ready(function () {
-        $(".action_sheet_wr").on("click", function (event) {
-          if (!$(event.target).closest(".action_sheet").length) {
-            hideActionSheet(".action_sheet_wr");
-          }
-        });
-      });
-
-      // 스크립트로 브라우저의 세로 값 계산 : 키보드 올라올 때 높이 조절을 위함
-      if (window.visualViewport) {
-        const actionSheet = document.querySelector(".action_sheet_wr");
-
-        function setVisualHeight() {
-          // visualViewport.height는 키보드를 제외한 순수한 가시 영역 높이를 반환합니다.
-          actionSheet.style.height = window.visualViewport.height + "px";
-        }
-
-        // 초기 설정
-        setVisualHeight();
-
-        // 크기 변경 이벤트(키보드 활성화/비활성화)에 리스너 등록
-        window.visualViewport.addEventListener("resize", setVisualHeight);
-      } else {
-        // visualViewport를 지원하지 않는 경우, window.innerHeight를 폴백으로 사용
-        // (위의 jQuery 예시와 동일)
-        $(window).on("resize", setActionSheetHeight);
-      }
     </script>
   </body>
 </html>
