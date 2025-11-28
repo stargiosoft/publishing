@@ -10868,7 +10868,6 @@ footer .links li a {
 .product_wr .page .img_cont {
   width: 100%;
   height: 100%;
-  height: calc(100vh - 108px);
 }
 .product_wr .page .img_cont.fit {
   height: calc(100vh - 108px);
@@ -12147,7 +12146,7 @@ h1 + .amulet_txt_wr {
   padding-bottom: 0;
 }
 .action_sheet_wr.chat_st .action_sheet_bd {
-  height: calc(100% - 117px);
+  height: calc(100vh - 235px);
 }
 .action_sheet_wr.chat_st .action_sheet_bd .chatting_room_wr {
   height: 100%;
@@ -12162,12 +12161,14 @@ h1 + .amulet_txt_wr {
 .action_sheet_wr .action_sheet {
   background: #fff;
   border-radius: 16px 16px 0 0;
-  max-height: calc(100% - 148px);
+  max-height: calc(100% - 118px);
   bottom: 100vh;
   position: relative;
   bottom: -100vh;
   transition: bottom 0.3s;
   width: 100%;
+  position: fixed;
+  transform: translateY(0);
 }
 .action_sheet_wr .action_sheet.pb_0 {
   padding-bottom: 0;
@@ -12287,7 +12288,7 @@ h1 + .amulet_txt_wr {
   padding-right: 10px;
   padding-left: 20px;
   overflow-y: auto;
-  max-height: calc(100vh - 212px);
+  max-height: calc(100vh - 320px);
 }
 .action_sheet_wr .bottom_btn_wr {
   position: relative;
