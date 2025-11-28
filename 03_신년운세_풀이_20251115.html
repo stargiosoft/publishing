@@ -1200,6 +1200,107 @@
         $(".body_wr").removeClass("notScroll");
       }
 
+      // 20251127 바텀시트 핸들링
+      $(document).ready(function () {
+        const sheetWrapperSelector = ".action_sheet_wr";
+        const handleSelector = ".action_sheet_hd";
+        const closeThreshold = 100; // 시트를 닫기 위한 최소 드래그 거리 (px)
+
+        let isDragging = false;
+        let startY = 0;
+        let currentSheet = null;
+
+        // --- 이벤트 헬퍼 함수 ---
+
+        // 터치/마우스 시작 지점을 가져오는 헬퍼 함수
+        function getClientY(e) {
+          return e.touches ? e.touches[0].clientY : e.clientY;
+        }
+
+        // --- 드래그 시작 ---
+        // action_sheet_hd에서 드래그 시작을 감지
+        $(handleSelector).on("mousedown touchstart", function (e) {
+          // 기본 클릭 이벤트 방지 (불필요한 동작 방지)
+          if (e.type === "touchstart") {
+            e.preventDefault();
+          }
+
+          // 현재 시트 래퍼를 저장
+          currentSheet = $(this).closest(sheetWrapperSelector);
+
+          // 시트가 열려 있을 때만 드래그 로직 시작
+          if (currentSheet.hasClass("active")) {
+            isDragging = true;
+            startY = getClientY(e);
+
+            // 드래그 중 CSS transition 일시 비활성화 (부드러운 드래그를 위해)
+            currentSheet.find(".action_sheet").css("transition", "none");
+          }
+        });
+
+        // --- 드래그 이동 ---
+        // 문서 전체에서 드래그 이동을 감지
+        $(document).on("mousemove touchmove", function (e) {
+          if (!isDragging) return;
+
+          const currentY = getClientY(e);
+          const diffY = currentY - startY; // 아래로 드래그하면 양수
+
+          // 시트를 아래로만 움직이도록 제한 (diffY가 양수일 때만)
+          if (diffY > 0) {
+            // 시트 자체를 translate로 이동시켜 시각적 피드백 제공
+            currentSheet.find(".action_sheet").css("transform", `translateY(${diffY}px)`);
+          }
+        });
+
+        // --- 드래그 종료 ---
+        // 문서 전체에서 드래그 종료를 감지
+        $(document).on("mouseup touchend", function (e) {
+          if (!isDragging) return;
+
+          isDragging = false;
+
+          // 현재 시트의 Action Sheet 요소를 가져옴
+          const sheet = currentSheet.find(".action_sheet");
+
+          // 이동 거리 계산 (터치 종료 시점 Y - 터치 시작 시점 Y)
+          let finalY = 0;
+          if (e.type === "touchend" && e.changedTouches && e.changedTouches.length > 0) {
+            finalY = e.changedTouches[0].clientY;
+          } else {
+            finalY = getClientY(e); // 마우스에서는 현재 위치 사용
+          }
+
+          const diffY = finalY - startY;
+
+          // 1. 임계값(closeThreshold)을 넘었을 경우: 시트 닫기
+          if (diffY > closeThreshold) {
+            hideActionSheet(currentSheet); // 기존 닫기 함수 호출
+          }
+
+          // 2. 임계값을 넘지 않았을 경우: 시트를 원래 위치로 복귀 (닫지 않음)
+          else {
+            // 트랜지션을 다시 활성화하여 복귀 모션을 부드럽게
+            sheet.css("transition", ""); // CSS에 정의된 기본 transition으로 복귀
+            sheet.css("transform", "translateY(0)"); // 원래 위치(0px)로 복귀
+          }
+
+          // 드래그 후 CSS transition 다시 활성화
+          currentSheet.find(".action_sheet").css("transition", "");
+          currentSheet = null; // 초기화
+        });
+
+        // 기존 hideActionSheet 함수를 jQuery 객체를 인자로 받도록 수정
+        function hideActionSheet(el) {
+          $(el).removeClass("active");
+          $(".body_wr").removeClass("notScroll");
+
+          // 시트가 닫힐 때 transform도 초기화되도록 추가
+          // (CSS transition이 적용된 상태에서 닫혀야 부드러운 애니메이션이 됩니다)
+          $(el).find(".action_sheet").css("transform", "translateY(0)");
+        }
+      });
+
       // 질문하기 input : 164px 까지 input 이 길어지며 이상일 시 스크롤
       // 입력 시 send 버튼 활성화
       const questionInput = document.querySelectorAll(".question_input_bx");
